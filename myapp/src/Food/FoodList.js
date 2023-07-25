@@ -2,6 +2,10 @@ const FoodList = () => {
 
     return(
         <main>
+            <div>
+                
+            </div>
+            
 
         </main>
     )
