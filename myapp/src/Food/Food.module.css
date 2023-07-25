@@ -42,11 +42,18 @@
   }
   
   .MainButtonImg {
-    /* MainButtonImg 스타일은 수정하지 않아도 됩니다. */
-    display: inline-block;
+    /* MainButtonImg 스타일 수정 */
+    display: block;
+    width: 200px; /* 버튼의 가로 크기를 200px로 설정 (원하는 크기로 변경 가능) */
+    height: auto; /* 버튼의 세로 크기를 자동으로 조정하여 비율 유지 */
     cursor: pointer;
-    background: transparent;
+    margin: 0 auto; /* 가로 중앙 정렬 */
     border: none;
+    background: transparent;
     padding: 0;
+    position: fixed;
+    bottom: 20px; /* 하단으로 20px 간격 띄움 */
+    left: 50%;
+    transform: translateX(-50%); /* 가로 중앙 정렬 */
   }
   
