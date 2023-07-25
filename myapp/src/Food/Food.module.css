@@ -10,8 +10,8 @@
       font-size: 18px; /* 작은 화면에서는 텍스트 크기를 조정 */
     }
   }
-
-.MainImg {
+  
+  .MainImg {
     /* 배경 이미지 속성 설정 */
     background-image: url("../Img/FoodMain/FoodMainBack.png");
     background-size: cover;
@@ -24,10 +24,9 @@
   
   .CenterCon {
     position: absolute;
-    bottom: 30%; /* MainCenterImg를 페이지 기준으로 하단 30% 지점에 배치 */
+    bottom: 50%; /* MainCenterImg를 페이지 기준으로 하단 50% 지점에 배치 */
     left: 50%;
-    transform: translate(-50%, 0); /* MainCenterImg를 가로 기준 중앙에 위치시킴 */
-    z-index: 1; /* MainCenterImg를 배경 이미지 위로 올려놓기 위해 높은 z-index 값 설정 */
+    transform: translate(-50%, 50%); /* MainCenterImg를 가로, 세로 기준 모두 중앙에 위치시킴 */
   }
   
   .MainCenterImg {
@@ -36,16 +35,18 @@
   
   .Maintext {
     position: absolute;
-    bottom: 100%; /* Maintext를 MainCenterImg 위쪽에 배치 (필요에 따라 조정) */
+    bottom: 70%; /* Maintext를 MainCenterImg 위쪽으로 70% 지점에 배치 (하단에서 70% 떨어진 위치) */
     left: 50%;
     transform: translate(-50%, 0); /* Maintext를 가로 기준 중앙에 위치시킴 */
-    font-size: 24px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 1; /* Maintext를 배경 이미지 위로 올려놓기 위해 높은 z-index 값 설정 */
+    max-width: 80%; /* 필요에 따라 Maintext의 최대 너비를 조정하세요 */
   }
   
-  /* 반응형 스타일을 추가하는 경우 미디어 쿼리를 사용하세요 */
+  .MainButtonImg {
+    /* MainButtonImg 스타일은 수정하지 않아도 됩니다. */
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
   
