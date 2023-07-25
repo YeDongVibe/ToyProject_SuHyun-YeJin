@@ -36,8 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-body {
-  background-image: url(./Img/FoodMain/FoodMainBack.png);
-  background-repeat: no-repeat;
-}

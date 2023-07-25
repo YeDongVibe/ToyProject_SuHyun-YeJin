@@ -3,8 +3,8 @@ const FoodMain = () => {
 
     return(
         <main>
-            <div>
-                <img src = ""/>
+            <div className = "MainImg">
+                <img src = "./"></img>
             </div>
         </main>
     )
