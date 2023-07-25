@@ -1,17 +1,21 @@
 /* 반응형 스타일 */
 @media (max-width: 600px) {
+
     /* 화면 너비가 600px 이하일 때 적용되는 스타일 */
     .CenterCon {
-      bottom: 20%; /* 작은 화면에서는 MainCenterImg를 하단 기준으로 20% 지점에 배치 */
+        bottom: 20%;
+        /* 작은 화면에서는 MainCenterImg를 하단 기준으로 20% 지점에 배치 */
     }
-  
+
     .Maintext {
-      bottom: 30%; /* 작은 화면에서는 Maintext를 MainCenterImg 위쪽으로 30% 지점에 배치 */
-      font-size: 18px; /* 작은 화면에서는 텍스트 크기를 조정 */
+        bottom: 30%;
+        /* 작은 화면에서는 Maintext를 MainCenterImg 위쪽으로 30% 지점에 배치 */
+        font-size: 18px;
+        /* 작은 화면에서는 텍스트 크기를 조정 */
     }
-  }
-  
-  .MainImg {
+}
+
+.MainImg {
     /* 배경 이미지 속성 설정 */
     background-image: url("../Img/FoodMain/FoodMainBack.png");
     background-size: cover;
@@ -19,41 +23,91 @@
     background-position: center;
     min-height: 100vh;
     /* 추가적인 스타일을 넣으세요 */
-    position: relative; /* MainImg 컨테이너에 position: relative 추가 */
-  }
-  
-  .CenterCon {
+    position: relative;
+    /* MainImg 컨테이너에 position: relative 추가 */
+}
+
+.CenterCon {
     position: absolute;
-    bottom: 50%; /* MainCenterImg를 페이지 기준으로 하단 50% 지점에 배치 */
+    bottom: 50%;
+    /* MainCenterImg를 페이지 기준으로 하단 50% 지점에 배치 */
     left: 50%;
-    transform: translate(-50%, 50%); /* MainCenterImg를 가로, 세로 기준 모두 중앙에 위치시킴 */
-  }
-  
-  .MainCenterImg {
+    transform: translate(-50%, 50%);
+    /* MainCenterImg를 가로, 세로 기준 모두 중앙에 위치시킴 */
+}
+
+.MainCenterImg {
     width: 100%;
-  }
-  
-  .Maintext {
+}
+
+.Maintext {
     position: absolute;
-    bottom: 70%; /* Maintext를 MainCenterImg 위쪽으로 70% 지점에 배치 (하단에서 70% 떨어진 위치) */
+    bottom: 70%;
+    /* Maintext를 MainCenterImg 위쪽으로 70% 지점에 배치 (하단에서 70% 떨어진 위치) */
     left: 50%;
-    transform: translate(-50%, 0); /* Maintext를 가로 기준 중앙에 위치시킴 */
-    max-width: 80%; /* 필요에 따라 Maintext의 최대 너비를 조정하세요 */
-  }
-  
-  .MainButtonImg {
+    transform: translate(-50%, 0);
+    /* Maintext를 가로 기준 중앙에 위치시킴 */
+    max-width: 80%;
+    /* 필요에 따라 Maintext의 최대 너비를 조정하세요 */
+}
+
+.MainButtonImg {
     /* MainButtonImg 스타일 수정 */
     display: block;
-    width: 200px; /* 버튼의 가로 크기를 200px로 설정 (원하는 크기로 변경 가능) */
-    height: auto; /* 버튼의 세로 크기를 자동으로 조정하여 비율 유지 */
+    width: 200px;
+    /* 버튼의 가로 크기를 200px로 설정 (원하는 크기로 변경 가능) */
+    height: auto;
+    /* 버튼의 세로 크기를 자동으로 조정하여 비율 유지 */
     cursor: pointer;
-    margin: 0 auto; /* 가로 중앙 정렬 */
+    margin: 0 auto;
+    /* 가로 중앙 정렬 */
     border: none;
     background: transparent;
     padding: 0;
     position: fixed;
-    bottom: 20px; /* 하단으로 20px 간격 띄움 */
+    bottom: 20px;
+    /* 하단으로 20px 간격 띄움 */
     left: 50%;
-    transform: translateX(-50%); /* 가로 중앙 정렬 */
-  }
-  
+    transform: translateX(-50%);
+    /* 가로 중앙 정렬 */
+}
+
+.ListCon {
+    display: flex;
+    /* Flexbox 레이아웃 사용 */
+    justify-content: center;
+    /* 가로 방향 가운데 정렬 */
+    align-items: center;
+    /* 세로 방향 가운데 정렬 */
+    height: 100vh;
+    /* 전체 화면 높이를 사용할 수 있도록 설정 */
+    position: relative;
+}
+
+.Listborder {
+    width: 98%; /* 웹페이지 너비의 94%로 틀의 너비를 설정 */
+    padding-bottom: 23%; /* 웹페이지 너비의 30%로 틀의 높이를 설정 */
+    border: 2px solid #FFD76E; /* 2픽셀 두께의 검은색 실선 테두리를 설정 */
+    box-sizing: border-box; /* 테두리 두께를 지정한 너비와 높이에 포함시킵니다 */
+    position: relative;
+}
+
+.ListFindButtom {
+    /* MainButtonImg 스타일 수정 */
+    display: block;
+    width: 200px;
+    /* 버튼의 가로 크기를 200px로 설정 (원하는 크기로 변경 가능) */
+    height: auto;
+    /* 버튼의 세로 크기를 자동으로 조정하여 비율 유지 */
+    cursor: pointer;
+    margin: 0;
+    /* 가운데 정렬 해제 */
+    border: none;
+    background: transparent;
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    /* 상단으로 20px 간격 띄움 */
+    left: 0px;
+    /* 좌측으로 20px 간격 띄움 */
+}
