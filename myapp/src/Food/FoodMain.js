@@ -3,7 +3,9 @@ const FoodMain = () => {
 
     return(
         <main>
-            <img src="../"/>
+            <div>
+                <img src = ""/>
+            </div>
         </main>
     )
 }
