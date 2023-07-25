@@ -1,0 +1,51 @@
+/* 반응형 스타일 */
+@media (max-width: 600px) {
+    /* 화면 너비가 600px 이하일 때 적용되는 스타일 */
+    .CenterCon {
+      bottom: 20%; /* 작은 화면에서는 MainCenterImg를 하단 기준으로 20% 지점에 배치 */
+    }
+  
+    .Maintext {
+      bottom: 30%; /* 작은 화면에서는 Maintext를 MainCenterImg 위쪽으로 30% 지점에 배치 */
+      font-size: 18px; /* 작은 화면에서는 텍스트 크기를 조정 */
+    }
+  }
+
+.MainImg {
+    /* 배경 이미지 속성 설정 */
+    background-image: url("../Img/FoodMain/FoodMainBack.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    /* 추가적인 스타일을 넣으세요 */
+    position: relative; /* MainImg 컨테이너에 position: relative 추가 */
+  }
+  
+  .CenterCon {
+    position: absolute;
+    bottom: 30%; /* MainCenterImg를 페이지 기준으로 하단 30% 지점에 배치 */
+    left: 50%;
+    transform: translate(-50%, 0); /* MainCenterImg를 가로 기준 중앙에 위치시킴 */
+    z-index: 1; /* MainCenterImg를 배경 이미지 위로 올려놓기 위해 높은 z-index 값 설정 */
+  }
+  
+  .MainCenterImg {
+    width: 100%;
+  }
+  
+  .Maintext {
+    position: absolute;
+    bottom: 100%; /* Maintext를 MainCenterImg 위쪽에 배치 (필요에 따라 조정) */
+    left: 50%;
+    transform: translate(-50%, 0); /* Maintext를 가로 기준 중앙에 위치시킴 */
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1; /* Maintext를 배경 이미지 위로 올려놓기 위해 높은 z-index 값 설정 */
+  }
+  
+  /* 반응형 스타일을 추가하는 경우 미디어 쿼리를 사용하세요 */
+  
