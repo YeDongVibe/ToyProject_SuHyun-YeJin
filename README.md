@@ -11,4 +11,6 @@
   * Front-end: 아이콘 수정, 메인페이지 작성, 버튼 생성 및 다음페이지로의 경로설정
   * Back-end: 데이터 처리 및 검색을 위한 데이터 수정, JSON 파일 생성 Test
 
-**23.07.26 
+**23.07.26 페이지 디자인 및 데이터 REST API 처리**
+  * Front-end: FoodMain, FoodList, FoodSearch 페이지 구현 및 디자인
+  * Back-end: 데이터 처리 및 REST API 구현 중
