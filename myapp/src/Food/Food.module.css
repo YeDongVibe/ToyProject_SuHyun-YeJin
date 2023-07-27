@@ -283,21 +283,3 @@ input[type=checkbox] {
     top: 60%;
     left: 6%;
 }
-
-.LoginBt {
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-}
-
-.LoginID {
-    width: 60%;
-    position: absolute;
-    top: 30%;
-}
-
-.LoginPW {
-    width: 60%;
-    position: absolute;
-    top: 45%;
-}
