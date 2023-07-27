@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Binggrae-Two';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* 반응형 스타일 */
 @media (max-width: 600px) {
 
@@ -62,8 +69,7 @@
 
 .MainButtonImg {
     /* MainButtonImg 스타일 수정 */
-    display: block;
-    width: 200px;
+    width: 400px;
     /* 버튼의 가로 크기를 200px로 설정 (원하는 크기로 변경 가능) */
     height: auto;
     /* 버튼의 세로 크기를 자동으로 조정하여 비율 유지 */
@@ -74,9 +80,29 @@
     background: transparent;
     padding: 0;
     position: fixed;
-    bottom: 20px;
+    bottom: 7%;
     /* 하단으로 20px 간격 띄움 */
     left: 50%;
+    transform: translateX(-50%);
+    /* 가로 중앙 정렬 */
+}
+
+.MainLoginBt {
+    /* MainButtonImg 스타일 수정 */
+    width: 170px;
+    /* 버튼의 가로 크기를 200px로 설정 (원하는 크기로 변경 가능) */
+    height: auto;
+    /* 버튼의 세로 크기를 자동으로 조정하여 비율 유지 */
+    cursor: pointer;
+    margin: 0 auto;
+    /* 가로 중앙 정렬 */
+    border: none;
+    background: transparent;
+    padding: 0;
+    position: fixed;
+    bottom: 0%;
+    /* 하단으로 20px 간격 띄움 */
+    left: 93%;
     transform: translateX(-50%);
     /* 가로 중앙 정렬 */
 }
@@ -162,7 +188,7 @@
 
 .FoodFoundChkdiv{
     display: inline-flex;
-    width: 80%;
+    /* width: 80%; */
     position: absolute;
     top: 15%;
     left: 7.5%;
@@ -176,10 +202,17 @@
 
 .FoodFoundChkdiv2 {
     display: inline-flex;
-    width: 80%;
+    /* width: 80%; */
     position: absolute;
     top: 15%;
     left: 30%; 
+}
+
+.FoundFindBt {
+    width: 200px;;
+    position: absolute;
+    bottom: 4%;
+    left: 85%; 
 }
 
 
@@ -191,4 +224,80 @@ input[type=checkbox] {
     background-image: url("../Img/FoodLogin/LoginBackImg.png");
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
+    height: 100%;
+    /* 절대 위치 설정 */
+    position: absolute;
+    top: auto;
+    left: auto;
+}
+
+
+.SearchBackImg {
+    background-image: url("../Img/FoodSearch/SearchBackImg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    /* 절대 위치 설정 */
+    position: absolute;
+    top: auto;
+    left: auto;
+}
+
+.SearchList {
+    width: 90%;
+    position: absolute;
+    top: 20%;
+    left: 8%;
+}
+
+.Searchall {
+    display: inline-flex;
+}
+.Searchsub {
+    display: inline-flex;
+    font-family: 'Binggrae-Two';
+    color: #406D24;
+    font-size: 35px;
+}
+.SearchAddress {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.SearchParking {
+    position: absolute;
+    top: 25%;
+    left: 8%;
+}
+.SearchPet {
+    position: absolute;
+    top: 40%;
+    left: 7%;
+}
+
+.SearchMenu {
+    position: absolute;
+    top: 60%;
+    left: 6%;
+}
+
+.LoginBt {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+}
+
+.LoginID {
+    width: 60%;
+    position: absolute;
+    top: 30%;
+}
+
+.LoginPW {
+    width: 60%;
+    position: absolute;
+    top: 45%;
 }

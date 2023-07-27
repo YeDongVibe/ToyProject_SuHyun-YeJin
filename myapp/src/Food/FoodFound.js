@@ -1,6 +1,9 @@
 import style from "./Food.module.css";
+import { Link } from "react-router-dom"
+
 import FoodFoundChk from "./FoodFoundChk";
 import FoundBackImg from "../Img/FoodFound/FoundBackImg.png"; // 이미지 파일 경로 수정
+import FoundFindBt from "../Img/FoodFound/FoundfindBt.png"
 
 
 const FoodFound = () => {
@@ -40,7 +43,7 @@ const FoodFound = () => {
                 </div>
                 <h1  className={style.FoundTextH4}>음식 카테고리</h1>
                 <div className={style.FoodFoundChkdiv2}>
-                    <div  className={style.FoodFoundChkinnerdiv2}>
+                    <div className={style.FoodFoundChkinnerdiv2}>
                     <FoodFoundChk id="check17" name="한식" />
                     <FoodFoundChk id="check18" name="중식"/>
                     <FoodFoundChk id="check19" name="일식"/>
@@ -56,6 +59,11 @@ const FoodFound = () => {
                     </div>
                 </div>
             </div>
+            <Link to="/FoodSearch">
+                    <div>
+                        <img src={FoundFindBt} alt="FoundFindBt" className={style.FoundFindBt} />
+                    </div>
+                </Link>
         </main>
     )
 }
