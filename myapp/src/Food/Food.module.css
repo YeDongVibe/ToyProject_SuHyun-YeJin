@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 /* 반응형 스타일 */
 @media (max-width: 600px) {
 
@@ -14,6 +21,8 @@
         /* 작은 화면에서는 텍스트 크기를 조정 */
     }
 }
+
+
 
 .MainImg {
     /* 배경 이미지 속성 설정 */
@@ -121,21 +130,65 @@
 
 .FoundTextH1 {
     color: rgb(0, 0, 0);
-    font-size: 20px;
+    font-family: 'KIMM_Bold';
+    font-size: 30px;
     font-weight: bolder;
     margin-bottom: 10px;
     position: absolute;
     left: 3%;
+
 }
 
 .FoundTextH2 {
     position: absolute;
-    top: 1%;
-    left: 13%;
+    top: 1.3%;
+    left: 20%;
 }
 
-.FoundCheck1{
+.FoundTextH3 {
+    font-family: 'KIMM_Bold';
+    position: absolute;
+    top: 6%;
+    left: 8%;
+}
+
+.FoundTextH4 {
+    font-family: 'KIMM_Bold';
+    position: absolute;
+    top: 6%;
+    left: 30%;
+}
+
+
+.FoodFoundChkdiv{
     display: inline-flex;
     width: 80%;
+    position: absolute;
+    top: 15%;
+    left: 7.5%;
+    
+}
 
+.checkboxLabel {
+    font-family: 'KIMM_Bold';
+    font-size: 25px;
+}
+
+.FoodFoundChkdiv2 {
+    display: inline-flex;
+    width: 80%;
+    position: absolute;
+    top: 15%;
+    left: 30%; 
+}
+
+
+input[type=checkbox] {
+    zoom: 1.5;
+}
+
+.LoginBackImg {
+    background-image: url("../Img/FoodLogin/LoginBackImg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
