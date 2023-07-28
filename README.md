@@ -15,4 +15,10 @@
   * Front-end: FoodMain, FoodList, FoodSearch 페이지 구현 및 디자인
   * Back-end: 데이터 처리 및 REST API 구현 중
 
-**23.07.27
+**23.07.27 페이지 디자인 및 로그인 관련 처리**
+  * Front-end: FoodLogin 및 페이지 구현 및 마무리
+  * Back-end: 로그인 데이터 베이스 연동, 로그인 컨트롤러 및 로그인 확인하는 서비스 구현
+
+**23.07.28 반응형 페이지 구현 및 로그인 및 데이터 전송 처리**
+  * Front-end: 구현된 페이지를 프레임워크를 사용하여 구현 중
+  * Back-end: fetch 할 수 있도록 데이터 Array로 전달 및 프론트 단에서 받을 수 있는지 확인
