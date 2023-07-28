@@ -112,7 +112,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 300px; /* Adjust the height as needed */
+    height: 300px;
+    /* Adjust the height as needed */
 }
 
 .ListFindButton {
@@ -121,8 +122,10 @@
     cursor: pointer;
     padding: 0;
     position: absolute;
-    top: 13%; /* Place the button at the top */
-    left: 7%; /* Place the button at the left */
+    top: 13%;
+    /* Place the button at the top */
+    left: 7%;
+    /* Place the button at the left */
 }
 
 
@@ -135,7 +138,8 @@
     position: absolute;
     top: auto;
     left: auto;
-    z-index: -2; /* 이미지를 뒤로 보내어 내용이 위에 나타나도록 설정 */
+    z-index: -2;
+    /* 이미지를 뒤로 보내어 내용이 위에 나타나도록 설정 */
 }
 
 .FoundSq::before {
@@ -145,7 +149,7 @@
     width: 97%;
     height: 97%;
     /* 사각형의 색상과 불투명도 설정 */
-    background-color: rgba(255, 255, 255, 0.65); 
+    background-color: rgba(255, 255, 255, 0.65);
     /* 사각형을 화면 중앙에 위치하도록 설정 */
     position: absolute;
     top: 50%;
@@ -186,13 +190,13 @@
 }
 
 
-.FoodFoundChkdiv{
+.FoodFoundChkdiv {
     display: inline-flex;
     /* width: 80%; */
     position: absolute;
     top: 15%;
     left: 7.5%;
-    
+
 }
 
 .checkboxLabel {
@@ -205,33 +209,21 @@
     /* width: 80%; */
     position: absolute;
     top: 15%;
-    left: 30%; 
+    left: 30%;
 }
 
 .FoundFindBt {
-    width: 200px;;
+    width: 200px;
+    ;
     position: absolute;
     bottom: 4%;
-    left: 85%; 
+    left: 85%;
 }
 
 
 input[type=checkbox] {
     zoom: 1.5;
 }
-
-.LoginBackImg {
-    background-image: url("../Img/FoodLogin/LoginBackImg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    /* 절대 위치 설정 */
-    position: absolute;
-    top: auto;
-    left: auto;
-}
-
 
 .SearchBackImg {
     background-image: url("../Img/FoodSearch/SearchBackImg.png");
@@ -255,12 +247,14 @@ input[type=checkbox] {
 .Searchall {
     display: inline-flex;
 }
+
 .Searchsub {
     display: inline-flex;
     font-family: 'Binggrae-Two';
-    color: #406D24;
+    color: #FD9F28;
     font-size: 35px;
 }
+
 .SearchAddress {
     position: absolute;
     top: 10%;
@@ -272,6 +266,7 @@ input[type=checkbox] {
     top: 25%;
     left: 8%;
 }
+
 .SearchPet {
     position: absolute;
     top: 40%;
@@ -283,3 +278,54 @@ input[type=checkbox] {
     top: 60%;
     left: 6%;
 }
+
+.LoginBackImg {
+    background-image: url("../Img/FoodLogin/LoginBackImg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex; /* 부모 요소를 Flex 컨테이너로 설정 */
+    justify-content: center; /* 가로 방향으로 가운데 정렬 */
+    align-items: center; /* 세로 방향으로 가운데 정렬 */
+}
+
+.Inputdiv {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}
+
+.LoginBtdiv {
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+}
+
+
+.Loginsub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 14px;
+    width: 700px;
+    height: 90px;
+    background-size: cover;
+    position: relative; 
+  }
+  
+.Loginsub input {
+    width: 590px;
+    height: 90px;
+    background-color: transparent; 
+    background-repeat: no-repeat;
+    background-position: left center; 
+    background-size: 10%; 
+    border: none; 
+    padding: 5px; 
+    position: absolute; 
+    left: 15%;
+}
+  
+  
