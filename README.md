@@ -14,3 +14,5 @@
 **23.07.26 페이지 디자인 및 데이터 REST API 처리**
   * Front-end: FoodMain, FoodList, FoodSearch 페이지 구현 및 디자인
   * Back-end: 데이터 처리 및 REST API 구현 중
+
+**23.07.27
