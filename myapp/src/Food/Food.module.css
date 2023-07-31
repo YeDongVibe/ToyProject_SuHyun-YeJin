@@ -152,6 +152,7 @@
   position: fixed;
   /* 네비게이션 바를 상단에 고정 */
   top: 0;
+  left: 7px;
   /* 네비게이션 바를 상단에 배치 */
   width: 100%;
   /* 네비게이션 바를 화면 전체 너비로 설정 */
@@ -162,16 +163,11 @@
   @media screen and (max-width: 767px) {
     flex-direction: column;
     align-items: center;
-  }
-}
+    /* background-color: white;
+    width: 100vw;
+    height: 100vh; */
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1px;
-  color: coral;
-  font-family: 'LeferiPoint-BlackA';
+  }
 }
 
 .NavSubtop {
@@ -183,8 +179,11 @@
 
   /* 반응형 스타일 */
   @media screen and (max-width: 767px) {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
+    position: absolute;
+    top: 10%;
+    font-size: 15px;
   }
 }
 
@@ -295,21 +294,25 @@ input[type=checkbox] {
     font-size: 15px;
     letter-spacing: 4px;
   }
+
   .FoundText2 {
     font-size: 15px;
     letter-spacing: 4px;
   }
+
   .FoundText3 {
     font-size: 15px;
     letter-spacing: 4px;
     left: 45%;
   }
+
   .FoodFoundChkdiv {
     flex-direction: column;
     line-height: 10px;
     top: 26%;
     left: 2%;
   }
+
   .checkboxLabel {
     font-size: 13px;
   }
@@ -320,6 +323,7 @@ input[type=checkbox] {
     left: 60%;
     transform: translateX(-50%);
   }
+
   .FoundFindBt {
     width: 100px;
     height: 30px;
@@ -328,57 +332,64 @@ input[type=checkbox] {
     right: 10%;
   }
 }
+
 /* 테블릿 세로 화면 */
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* 여기에 테블릿 세로 화면에 맞는 CSS를 추가하세요. */
   .FoundText1 {
     top: 7%;
     left: 3%;
   }
-  
+
   .FoundText2 {
     top: 15%;
     left: 5%;
   }
+
   .FoundText3 {
     top: 15%;
     left: 45%;
   }
+
   .FoodFoundChkdiv {
     top: 23%;
   }
+
   .FoodFoundChkdiv2 {
     top: 23%;
     left: 46%;
   }
-  .FoundFindBt {
 
-  }
-  
-  
+  .FoundFindBt {}
+
+
   /* 추가적인 반응형 스타일을 적용하세요. */
 }
 
 /* 테블릿 가로 화면 */
 @media (min-width: 992px) and (max-width: 1199px) {
+
   /* 여기에 테블릿 가로 화면에 맞는 CSS를 추가하세요. */
   .FoundImg {
     height: 100vh;
   }
-  
+
   .FoundText1 {
     top: 8%;
     left: 2%;
   }
-  
+
   .FoundText2 {
     top: 17%;
     left: 4%;
   }
+
   .FoundText3 {
     top: 17%;
     left: 40%;
   }
+
   .FoodFoundChkdiv2 {
     top: 26%;
     left: 42%;
@@ -438,21 +449,67 @@ input[type=checkbox] {
 
 
 /* FoodList */
-
-.ListRow{
+.ListAll {
   position: absolute;
-  top: 12%;
-  left: 2%;
+  top: 10%;
+}
+.ListRow {
   font-family: 'ChosunGu';
   font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
 }
+
+/* 기본 스타일 */
 td {
   padding: 5px;
 }
 
 .PageBt {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+  .ListRow {
+    top: 20%;
+    left: 1%;
+  }
+
+  .Mapdiv {
+    position: relative;
+    margin-top: 20px; /* 지도와 리스트 사이 여백 조정 */
+  }
+}
+
+/* 테블릿 세로 */
+@media (min-width: 768px) and (max-width: 991px) {
+  .ListRow {
+    top: 20%;
+    left: 1%;
+  }
+
+  .Mapdiv {
+    position: relative;
+    margin-top: 20px; /* 지도와 리스트 사이 여백 조정 */
+  }
+}
+
+/* 테블릿 가로 */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .ListRow {
+    top: 20%;
+    left: 1%;
+  }
+
+  .Mapdiv {
+    position: absolute;
+    bottom: 10px; /* 지도를 하단에 표시 */
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

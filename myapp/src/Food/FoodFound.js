@@ -10,60 +10,56 @@ const FoodFound = () => {
 
     return (
         <main>
-            <div className={style.FoundBackImg} style={{ backgroundImage: `url("${FoundBackImg}")` }}>
-                <div className={style.FoundSq}>
-                    <div>
-                        <h1 className={style.FoundTextH1}>식 당 명 및 음 식 명 : </h1>
-                        <h2 className={style.FoundTextH2}>---------------------------------------------------</h2>
-                    </div>
+            <div className={style.FoundImg}>
+                <div>
+                    <h1 className={style.FoundText1}>식당명및음식명 :</h1>
                 </div>
-                <h1  className={style.FoundTextH3}>구선택</h1>
-                <div className={style.FoodFoundChkdiv}>
-
-                    <div>
+                <h1 className={style.FoundText2}>구선택</h1>
+            </div>
+            <div className={style.FoodFoundChkdiv}>
+                <div>
                     <FoodFoundChk id="check1" name="강서구" />
-                    <FoodFoundChk id="check2" name="금정구"/>
-                    <FoodFoundChk id="check3" name="기장군"/>
+                    <FoodFoundChk id="check2" name="금정구" />
+                    <FoodFoundChk id="check3" name="기장군" />
                     <FoodFoundChk id="check4" name="남구" />
                     <FoodFoundChk id="check5" name="동구" />
                     <FoodFoundChk id="check6" name="동래구" />
-                    <FoodFoundChk id="check7" name="부산진구"/>
+                    <FoodFoundChk id="check7" name="부산진구" />
                     <FoodFoundChk id="check8" name="북구" />
-                    </div>
-                    <div>
+                </div>
+                <div>
                     <FoodFoundChk id="check9" name="사상구" />
                     <FoodFoundChk id="check10" name="사하구" />
                     <FoodFoundChk id="check11" name="서구" />
                     <FoodFoundChk id="check12" name="수영구" />
                     <FoodFoundChk id="check13" name="연제구" />
-                    <FoodFoundChk id="check14" name="영도구"/>
+                    <FoodFoundChk id="check14" name="영도구" />
                     <FoodFoundChk id="check15" name="중구" />
                     <FoodFoundChk id="check16" name="해운대구" />
-                    </div>
                 </div>
-                <h1  className={style.FoundTextH4}>음식 카테고리</h1>
-                <div className={style.FoodFoundChkdiv2}>
-                    <div className={style.FoodFoundChkinnerdiv2}>
+            </div>
+            <h1 className={style.FoundText3}>음식카테고리</h1>
+            <div className={style.FoodFoundChkdiv2}>
+                <div className={style.FoodFoundChkinnerdiv2}>
                     <FoodFoundChk id="check17" name="한식" />
-                    <FoodFoundChk id="check18" name="중식"/>
-                    <FoodFoundChk id="check19" name="일식"/>
+                    <FoodFoundChk id="check18" name="중식" />
+                    <FoodFoundChk id="check19" name="일식" />
                     <FoodFoundChk id="check20" name="양식" />
                     <FoodFoundChk id="check21" name="카페" />
-                    </div>
-                    <div>
+                </div>
+                <div>
                     <FoodFoundChk id="check22" name="술집" />
-                    <FoodFoundChk id="check23" name="편의점"/>
+                    <FoodFoundChk id="check23" name="편의점" />
                     <FoodFoundChk id="check24" name="외국음식" />
                     <FoodFoundChk id="check25" name="기타" />
                     <FoodFoundChk id="check26" name="기타 휴게소" />
-                    </div>
                 </div>
             </div>
             <Link to="/FoodSearch">
-                    <div>
-                        <img src={FoundFindBt} alt="FoundFindBt" className={style.FoundFindBt} />
-                    </div>
-                </Link>
+                <div>
+                    <img src={FoundFindBt} alt="FoundFindBt" className={style.FoundFindBt} />
+                </div>
+            </Link>
         </main>
     )
 }

@@ -1,5 +1,4 @@
 import style from "./Food.module.css"
-import SearchList from "../Img/FoodSearch/SearchList.png"
 import FoodMap from "./FoodMap";
 
 
@@ -21,9 +20,6 @@ const FoodSearch = () => {
                 <div className={style.Searchsub}>
                     <h1 className={style.SearchMenu}>다국어 메뉴(English Menu)</h1>
                 </div>
-            </div>
-            <div className={style.Mapdiv}>
-                <FoodMap />
             </div>
 
         </main>
