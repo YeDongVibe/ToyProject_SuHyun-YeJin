@@ -14,11 +14,12 @@
 }
 
 @font-face {
-  font-family: 'Binggrae-Two';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+  font-family: 'ChosunGu';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
 
 /* FoodMain */
 .MainImg {
@@ -143,7 +144,7 @@
   }
 }
 
-/* FoodNAv */
+/* FoodNav */
 .NavAll {
   display: flex;
   align-items: center;
@@ -219,4 +220,239 @@
 
 .Searchsub {
   margin: 10px;
+}
+
+/* FoodFound */
+.FoundImg {
+  background-image: url("../Img/FoodFound/FoundBackImg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.FoundText1 {
+  font-family: 'KIMM_Bold';
+  letter-spacing: 10px;
+  position: absolute;
+  top: 8%;
+  left: 1%;
+}
+
+.FoundText2 {
+  font-family: 'KIMM_Bold';
+  letter-spacing: 10px;
+  position: absolute;
+  top: 16%;
+  left: 3%;
+}
+
+input[type=checkbox] {
+  zoom: 1.5;
+}
+
+.checkboxLabel {
+  font-family: 'KIMM_Bold';
+  font-size: 25px;
+}
+
+.FoodFoundChkdiv {
+  display: inline-flex;
+  position: absolute;
+  line-height: 40px;
+  top: 26%;
+  left: 3%;
+}
+
+.FoundText3 {
+  font-family: 'KIMM_Bold';
+  letter-spacing: 10px;
+  position: absolute;
+  top: 16%;
+  left: 30%;
+}
+
+.FoodFoundChkdiv2 {
+  display: inline-flex;
+  position: absolute;
+  line-height: 40px;
+  top: 26%;
+  left: 30%;
+}
+
+.FoundFindBt {
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+}
+
+/* 모바일 화면 */
+@media (max-width: 767px) {
+  .FoundText1 {
+    font-size: 15px;
+    letter-spacing: 4px;
+  }
+  .FoundText2 {
+    font-size: 15px;
+    letter-spacing: 4px;
+  }
+  .FoundText3 {
+    font-size: 15px;
+    letter-spacing: 4px;
+    left: 45%;
+  }
+  .FoodFoundChkdiv {
+    flex-direction: column;
+    line-height: 10px;
+    top: 26%;
+    left: 2%;
+  }
+  .checkboxLabel {
+    font-size: 13px;
+  }
+
+  .FoodFoundChkdiv2 {
+    flex-direction: column;
+    top: 26%;
+    left: 60%;
+    transform: translateX(-50%);
+  }
+  .FoundFindBt {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    bottom: 3%;
+    right: 10%;
+  }
+}
+/* 테블릿 세로 화면 */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* 여기에 테블릿 세로 화면에 맞는 CSS를 추가하세요. */
+  .FoundText1 {
+    top: 7%;
+    left: 3%;
+  }
+  
+  .FoundText2 {
+    top: 15%;
+    left: 5%;
+  }
+  .FoundText3 {
+    top: 15%;
+    left: 45%;
+  }
+  .FoodFoundChkdiv {
+    top: 23%;
+  }
+  .FoodFoundChkdiv2 {
+    top: 23%;
+    left: 46%;
+  }
+  .FoundFindBt {
+
+  }
+  
+  
+  /* 추가적인 반응형 스타일을 적용하세요. */
+}
+
+/* 테블릿 가로 화면 */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* 여기에 테블릿 가로 화면에 맞는 CSS를 추가하세요. */
+  .FoundImg {
+    height: 100vh;
+  }
+  
+  .FoundText1 {
+    top: 8%;
+    left: 2%;
+  }
+  
+  .FoundText2 {
+    top: 17%;
+    left: 4%;
+  }
+  .FoundText3 {
+    top: 17%;
+    left: 40%;
+  }
+  .FoodFoundChkdiv2 {
+    top: 26%;
+    left: 42%;
+  }
+
+}
+
+/* FoodLogin */
+.LoginBackImg {
+  background-image: url("../Img/FoodLogin/LoginBackImg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.Loginsub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 14px;
+  width: 560px;
+  height: 80px;
+  background-size: cover;
+  position: relative;
+}
+
+.Loginsub input {
+  width: 460px;
+  height: 70px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 10%;
+  border: none;
+  padding: 5px;
+  position: absolute;
+  left: 16%;
+
+}
+
+.Inputdiv {
+  position: absolute;
+  top: 25%;
+  left: 32%;
+
+}
+
+.LoginBt {
+  width: 300px;
+  height: 90px;
+  position: absolute;
+  bottom: 20%;
+  right: 39%;
+}
+
+
+/* FoodList */
+
+.ListRow{
+  position: absolute;
+  top: 12%;
+  left: 2%;
+  font-family: 'ChosunGu';
+  font-size: 17px;
+}
+td {
+  padding: 5px;
+}
+
+.PageBt {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
