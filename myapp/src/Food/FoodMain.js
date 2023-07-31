@@ -4,7 +4,6 @@ import style from "./Food.module.css"
 import MainCenterImg from "../Img/FoodMain/MainCenterImg.png"
 import MainTextImg from "../Img/FoodMain/MainTextImg.png"
 import MainButtonImg from "../Img/FoodMain/MainButtonImg.png"
-import MainLoginBt from "../Img/FoodMain/MainLoginArrow.png"
 
 const FoodMain = () => {
 
@@ -18,12 +17,6 @@ const FoodMain = () => {
                 <Link to="/FoodList">
                     <div>
                         <img src={MainButtonImg} alt="MainButtonImg" className={style.MainButtonImg} />
-                    </div>
-                </Link>
-
-                <Link to="/FoodLogin">
-                    <div>
-                        <img src={MainLoginBt} alt="MainLoginBt" className={style.MainLoginBt} />
                     </div>
                 </Link>
             </div>

@@ -1,13 +1,12 @@
 import style from "./Food.module.css"
 import SearchList from "../Img/FoodSearch/SearchList.png"
-
+import FoodMap from "./FoodMap";
 
 
 const FoodSearch = () => {
 
     return (
-        <main className={style.SearchBackImg}>
-            <img src={SearchList} alt="SearchList" className={style.SearchList} />
+        <main>
             <div className={style.Searchall}>
                 <div className={style.Searchsub}>
                     <h1 className={style.SearchAddress}>주소(address)
@@ -23,6 +22,10 @@ const FoodSearch = () => {
                     <h1 className={style.SearchMenu}>다국어 메뉴(English Menu)</h1>
                 </div>
             </div>
+            <div className={style.Mapdiv}>
+                <FoodMap />
+            </div>
+
         </main>
     )
 }
