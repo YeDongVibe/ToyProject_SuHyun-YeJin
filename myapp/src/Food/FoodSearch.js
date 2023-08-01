@@ -1,5 +1,5 @@
 import style from "./Food.module.css"
-import FoodMap from "./FoodMap";
+
 
 
 const FoodSearch = () => {
@@ -21,7 +21,6 @@ const FoodSearch = () => {
                     <h1 className={style.SearchMenu}>다국어 메뉴(English Menu)</h1>
                 </div>
             </div>
-
         </main>
     )
 }

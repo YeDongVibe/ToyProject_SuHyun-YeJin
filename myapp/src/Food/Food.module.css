@@ -33,114 +33,79 @@
 
 .MainCenterImg {
   width: 450px;
-  /* 기본 크기 */
   height: 445px;
-  /* 기본 크기 */
   position: absolute;
   top: 50%;
-  /* 화면 상단과 하단의 중간 위치에 배치 */
   left: 50%;
-  /* 화면 좌우 중앙에 배치 */
   transform: translate(-50%, -50%);
-  /* 정확한 중심 정렬 */
+
 
   /* 반응형 스타일 */
   @media (max-width: 767px) {
     width: 90%;
-    /* 화면 너비에 맞춰진 90% 크기로 변경 */
     height: auto;
-    /* 비율 유지를 위해 높이를 자동으로 설정 */
     max-width: 450px;
-    /* 최대 크기를 450px로 제한 */
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
     width: 70%;
-    /* 화면 너비에 맞춰진 70% 크기로 변경 */
     height: auto;
-    /* 비율 유지를 위해 높이를 자동으로 설정 */
     max-width: 450px;
-    /* 최대 크기를 450px로 제한 */
   }
 
   @media (min-width: 992px) and (max-width: 1199px) {
     width: 50%;
-    /* 화면 너비에 맞춰진 50% 크기로 변경 */
     height: auto;
-    /* 비율 유지를 위해 높이를 자동으로 설정 */
     max-width: 450px;
-    /* 최대 크기를 450px로 제한 */
   }
 }
 
 .Maintext {
   width: 400px;
-  /* 기본 크기 */
   height: 120px;
-  /* 기본 크기 */
   position: absolute;
   top: 10%;
-  /* 화면 상단과 하단의 중간 위치에 배치 */
   left: 50%;
-  /* 화면 좌우 중앙에 배치 */
   transform: translate(-50%, -50%);
-  /* 정확한 중심 정렬 */
 
   /* 반응형 스타일 */
   @media (max-width: 767px) {
     width: 80%;
-    /* 화면 너비에 맞춰진 80% 크기로 변경 */
     height: auto;
-    /* 비율 유지를 위해 높이를 자동으로 설정 */
     max-width: 400px;
-    /* 최대 크기를 400px로 제한 */
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
     width: 60%;
-    /* 화면 너비에 맞춰진 60% 크기로 변경 */
     height: auto;
-    /* 비율 유지를 위해 높이를 자동으로 설정 */
     max-width: 400px;
-    /* 최대 크기를 400px로 제한 */
   }
 
   @media (min-width: 992px) and (max-width: 1199px) {
     width: 40%;
-    /* 화면 너비에 맞춰진 40% 크기로 변경 */
     height: auto;
-    /* 비율 유지를 위해 높이를 자동으로 설정 */
     max-width: 400px;
-    /* 최대 크기를 400px로 제한 */
   }
 }
 
 .MainButtonImg {
   position: absolute;
   width: 200px;
-  /* 크기를 200px로 설정 */
   bottom: 5%;
-  /* MainCenterImg 아래에 5% 위치에 배치 */
   left: 50%;
-  /* 화면 좌우 중앙에 배치 */
   transform: translateX(-50%);
-  /* 정확한 중심 정렬 */
-  /* 원하는 스타일 */
 
   /* 반응형 스타일 */
   @media (max-width: 767px) {
     width: 150px;
-    /* 크기를 150px로 줄임 */
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
     width: 180px;
-    /* 크기를 180px로 줄임 */
   }
 
   @media (min-width: 992px) and (max-width: 1199px) {
     width: 160px;
-    /* 크기를 160px로 줄임 */
   }
 }
 
@@ -150,12 +115,9 @@
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  /* 네비게이션 바를 상단에 고정 */
   top: 0;
   left: 7px;
-  /* 네비게이션 바를 상단에 배치 */
   width: 100%;
-  /* 네비게이션 바를 화면 전체 너비로 설정 */
   z-index: 9999;
 
 
@@ -179,7 +141,6 @@
 
   /* 반응형 스타일 */
   @media screen and (max-width: 767px) {
-    /* flex-direction: column; */
     align-items: center;
     position: absolute;
     top: 10%;
@@ -197,19 +158,12 @@
     display: flex;
     justify-content: flex-end;
     margin: 2px;
-    /* 사이 간격 2px로 조정 */
+
   }
 }
 
 
 /* FoodSearch */
-.Mapdiv {
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  transform: translate(0, -50%);
-}
-
 .Searchall {
   position: absolute;
   top: 15%;
@@ -336,7 +290,6 @@ input[type=checkbox] {
 /* 테블릿 세로 화면 */
 @media (min-width: 768px) and (max-width: 991px) {
 
-  /* 여기에 테블릿 세로 화면에 맞는 CSS를 추가하세요. */
   .FoundText1 {
     top: 7%;
     left: 3%;
@@ -361,16 +314,11 @@ input[type=checkbox] {
     left: 46%;
   }
 
-  .FoundFindBt {}
-
-
-  /* 추가적인 반응형 스타일을 적용하세요. */
 }
 
 /* 테블릿 가로 화면 */
 @media (min-width: 992px) and (max-width: 1199px) {
 
-  /* 여기에 테블릿 가로 화면에 맞는 CSS를 추가하세요. */
   .FoundImg {
     height: 100vh;
   }
@@ -397,7 +345,10 @@ input[type=checkbox] {
 
 }
 
+
+
 /* FoodLogin */
+/* 기본 CSS */
 .LoginBackImg {
   background-image: url("../Img/FoodLogin/LoginBackImg.png");
   background-size: cover;
@@ -405,47 +356,219 @@ input[type=checkbox] {
   background-position: center;
   height: 100vh;
   position: relative;
-}
-
-.Loginsub {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 14px;
-  width: 560px;
-  height: 80px;
-  background-size: cover;
-  position: relative;
 }
 
-.Loginsub input {
-  width: 460px;
-  height: 70px;
+.LoginsubId {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../Img/FoodLogin/Login.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.LoginsubId input {
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 10%;
-  border: none;
-  padding: 5px;
-  position: absolute;
-  left: 16%;
-
+  border-style: none;
+  width: 470px;
+  height: 90px;
+  text-align: center;
+  font-size: 30px;
 }
 
-.Inputdiv {
+.LoginsubPw {
   position: absolute;
-  top: 25%;
-  left: 32%;
+  top: 34%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../Img/FoodLogin/Login.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+.LoginsubPw input {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border-style: none;
+  width: 470px;
+  height: 90px;
+  text-align: center;
+  font-size: 30px;
 }
 
 .LoginBt {
-  width: 300px;
-  height: 90px;
   position: absolute;
-  bottom: 20%;
-  right: 39%;
+  bottom: 32%;
+  width: 400px;
+  height: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../Img/FoodLogin/LoginBt.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-style: none;
+  background-color: transparent;
 }
+
+.LoginCreate {
+  position: absolute;
+  bottom: 7%;
+  width: 350px;
+  height: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../Img/FoodLogin/LoginCreate.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-style: none;
+  background-color: transparent;
+}
+
+.LoginsubBack {
+  width: 700px;
+  height: 450px;
+  position: absolute;
+  bottom: 57%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+/* 반응형 조건 */
+@media (max-width: 767px){
+  /* 모바일 */
+  .LoginsubId,
+  .LoginsubPw,
+  .LoginBt,
+  .LoginCreate,
+  .LoginsubBack {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .LoginsubId input,
+  .LoginsubPw input {
+    font-size: 19px;
+    width: 99%; /* 크기 조정을 위한 추가 */
+    height: 99%; /* 크기 조정을 위한 추가 */
+    background-size: cover;
+    text-align: center;
+  }
+
+  .LoginsubId {
+    top: 22%;
+    background-position: center;
+    background-size: 100%;
+    width: 330px;
+    height: 71px;
+
+  }
+
+  .LoginsubPw {
+    top: 31%;
+    background-position: center;
+    background-size: 100%;
+    width: 330px;
+    height: 71px;
+  }
+
+  .LoginBt {
+    bottom: 47%;
+    background-size: 60%;
+  }
+
+  .LoginCreate {
+    bottom: 20%;
+  }
+  .LoginsubBack {
+    top: 17%;
+    width: 100%;
+    height: 40%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* 테블릿 세로 */
+  .LoginsubId,
+  .LoginsubPw,
+  .LoginBt,
+  .LoginCreate,
+  .LoginsubBack {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .LoginsubId input,
+  .LoginsubPw input {
+    font-size: 30px;
+  }
+
+  .LoginsubId {
+    top: 27%;
+  }
+
+  .LoginsubPw {
+    top: 37%;
+  }
+
+  .LoginBt {
+    top: 48%;
+  }
+
+  .LoginCreate {
+    bottom: 17%;
+  }
+  .LoginsubBack {
+    top: 22%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* 테블릿 가로 */
+  .LoginsubId,
+  .LoginsubPw,
+  .LoginBt,
+  .LoginCreate,
+  .LoginsubBack {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .LoginsubId input,
+  .LoginsubPw input {
+    /* width: 90%;
+    height: 90px; */
+    font-size: 30px;
+  }
+
+  .LoginsubId {
+    top: 25%;
+  }
+
+  .LoginsubPw {
+    top: 38%;
+  }
+
+  .LoginBt {
+    bottom: 32%;
+  }
+
+  .LoginCreate {
+    bottom: 12%;
+    background-size: 70%;
+  }
+  .LoginsubBack {
+    top: 18%;
+  }
+}
+
+
 
 
 /* FoodList */
@@ -453,6 +576,7 @@ input[type=checkbox] {
   position: absolute;
   top: 10%;
 }
+
 .ListRow {
   font-family: 'ChosunGu';
   font-size: 17px;
@@ -461,7 +585,6 @@ input[type=checkbox] {
   text-align: center;
 }
 
-/* 기본 스타일 */
 td {
   padding: 5px;
 }
@@ -482,7 +605,8 @@ td {
 
   .Mapdiv {
     position: relative;
-    margin-top: 20px; /* 지도와 리스트 사이 여백 조정 */
+    margin-top: 20px;
+    /* 지도와 리스트 사이 여백 조정 */
   }
 }
 
@@ -495,7 +619,8 @@ td {
 
   .Mapdiv {
     position: relative;
-    margin-top: 20px; /* 지도와 리스트 사이 여백 조정 */
+    margin-top: 20px;
+    /* 지도와 리스트 사이 여백 조정 */
   }
 }
 
@@ -508,7 +633,8 @@ td {
 
   .Mapdiv {
     position: absolute;
-    bottom: 10px; /* 지도를 하단에 표시 */
+    bottom: 10px;
+    /* 지도를 하단에 표시 */
     left: 50%;
     transform: translateX(-50%);
   }

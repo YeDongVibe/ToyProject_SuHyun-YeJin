@@ -1,15 +1,16 @@
 import style from './Food.module.css';
 import { useEffect, useState } from 'react';
-import FoodMap from "./FoodMap";
+import FoodMap from './FoodMap';
 
 const FoodList = () => {
   const [foodList, setFoodList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 20; // 한 페이지에 보여줄 항목 수를 정의합니다.
-  const pagesToShow = 6; // 현재 페이지 주변에 보여줄 페이지 수를 정의합니다.
+  const itemsPerPage = 20;
+  const pagesToShow = 6;
+  const [selectedFoodId, setSelectedFoodId] = useState(null); // 선택한 음식점 id를 저장할 상태
 
   useEffect(() => {
-    fetch('http://192.168.0.64:8080/getFoods', { method: 'GET' })
+    fetch('http://192.168.0.103:8080/getFoods', { method: 'GET' })
       .then((response) => response.json())
       .then((data) => setFoodList(data))
       .catch((error) => console.error('Error fetching data:', error));
@@ -37,18 +38,29 @@ const FoodList = () => {
     setCurrentPage(1);
   };
 
+  const handleFoodNameClick = (foodId) => {
+    setSelectedFoodId(foodId);
+  };
+
   const renderTableRows = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = Math.min(startIndex + itemsPerPage, foodList.length);
     return foodList.slice(startIndex, endIndex).map((item) => (
       <tr key={item.id}>
-        <td >{item.id}</td>
-        <td>{item.name}</td>
+        <td>{item.id}</td>
+        <td
+          onClick={() => handleFoodNameClick(item.id)}
+          style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+        >
+          {item.name}
+
+        </td>
         <td>{item.addr_do}</td>
         <td>{item.contact}</td>
       </tr>
     ));
   };
+
 
   const renderTableRowshead = () => (
     <thead>
@@ -100,22 +112,26 @@ const FoodList = () => {
   return (
     <main>
       <div>
-        <table>
-          <div className={style.ListAll}>
+        <table className={style.ListAll}>
           {renderTableRowshead()}
-          <tbody className={style.ListRow}>{renderTableRows()}</tbody>
-          </div>
+          <tbody className={style.ListRow}>
+            {renderTableRows()}
+          </tbody>
         </table>
         <div className={style.PageBt}>
-          <button onClick={goToFirstPage} style={buttonStyles}>처음페이지로</button>
-          <button onClick={goToPreviousPage} style={buttonStyles}>이전</button>
+          <button onClick={goToFirstPage} style={buttonStyles}>
+            처음페이지로
+          </button>
+          <button onClick={goToPreviousPage} style={buttonStyles}>
+            이전
+          </button>
           {renderPaginationButtons()}
-          <button onClick={goToNextPage} style={buttonStyles}>다음</button>
+          <button onClick={goToNextPage} style={buttonStyles}>
+            다음
+          </button>
         </div>
       </div>
-      <div className={style.Mapdiv}>
-        {foodList.length > 0 && <FoodMap foodList={foodList} />}
-      </div>
+      <FoodMap foodList={foodList} selectedFoodId={selectedFoodId} />
     </main>
   );
 };
