@@ -20,6 +20,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'omyu_pretty';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* FoodMain */
 .MainImg {
@@ -125,10 +131,6 @@
   @media screen and (max-width: 767px) {
     flex-direction: column;
     align-items: center;
-    /* background-color: white;
-    width: 100vw;
-    height: 100vh; */
-
   }
 }
 
@@ -161,7 +163,6 @@
 
   }
 }
-
 
 /* FoodSearch */
 
@@ -444,7 +445,8 @@ input[type=checkbox] {
 }
 
 /* 반응형 조건 */
-@media (max-width: 767px){
+@media (max-width: 767px) {
+
   /* 모바일 */
   .LoginsubId,
   .LoginsubPw,
@@ -458,8 +460,10 @@ input[type=checkbox] {
   .LoginsubId input,
   .LoginsubPw input {
     font-size: 19px;
-    width: 99%; /* 크기 조정을 위한 추가 */
-    height: 99%; /* 크기 조정을 위한 추가 */
+    width: 99%;
+    /* 크기 조정을 위한 추가 */
+    height: 99%;
+    /* 크기 조정을 위한 추가 */
     background-size: cover;
     text-align: center;
   }
@@ -489,6 +493,7 @@ input[type=checkbox] {
   .LoginCreate {
     bottom: 20%;
   }
+
   .LoginsubBack {
     top: 17%;
     width: 100%;
@@ -497,6 +502,7 @@ input[type=checkbox] {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* 테블릿 세로 */
   .LoginsubId,
   .LoginsubPw,
@@ -527,12 +533,14 @@ input[type=checkbox] {
   .LoginCreate {
     bottom: 17%;
   }
+
   .LoginsubBack {
     top: 22%;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+
   /* 테블릿 가로 */
   .LoginsubId,
   .LoginsubPw,
@@ -545,8 +553,6 @@ input[type=checkbox] {
 
   .LoginsubId input,
   .LoginsubPw input {
-    /* width: 90%;
-    height: 90px; */
     font-size: 30px;
   }
 
@@ -566,12 +572,11 @@ input[type=checkbox] {
     bottom: 12%;
     background-size: 70%;
   }
+
   .LoginsubBack {
     top: 18%;
   }
 }
-
-
 
 
 /* FoodList */
@@ -610,7 +615,6 @@ td {
   .Mapdiv {
     position: relative;
     margin-top: 20px;
-    /* 지도와 리스트 사이 여백 조정 */
   }
 }
 
@@ -624,7 +628,6 @@ td {
   .Mapdiv {
     position: relative;
     margin-top: 20px;
-    /* 지도와 리스트 사이 여백 조정 */
   }
 }
 
@@ -638,13 +641,12 @@ td {
   .Mapdiv {
     position: absolute;
     bottom: 10px;
-    /* 지도를 하단에 표시 */
     left: 50%;
     transform: translateX(-50%);
   }
 }
 
-/* FoodJoin & FoodAddr*/
+/* FoodJoin & FoodAddr */
 .JoinImg {
   background-image: url("../Img/FoodJoin/JoinbackImg.png");
   background-size: cover;
@@ -662,73 +664,258 @@ td {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1200px; /* 이미지의 가로 크기에 맞게 조정 */
-  height: 80px; /* 이미지의 세로 크기에 맞게 조정 */
+  width: 1200px;
+  height: 75px;
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-
 }
+
 .JoinEmail input,
 .JoinPW input,
 .JoinConfirmPw input,
 .JoinNick input,
 .JoinPhoneN input,
-.JoinAddr input {
+.JoinAddrtxt input {
   width: 830px;
   height: 70px;
   border-style: none;
   background-color: transparent;
   position: absolute;
   left: 30%;
-  top: 6%;
-  font-size: 30px;
+  top: 3%;
+  font-family: 'omyu_pretty';
+  font-size: 29px;
   text-align: center;
 }
 
-/* Set specific background images for each input */
 .JoinEmail {
   background-image: url("../Img/FoodJoin/JoinEmail.png");
-  top: 30%; /* Adjust the vertical position if necessary */
+  top: 22%;
 }
 
 .JoinPW {
   background-image: url("../Img/FoodJoin/JoinPW.png");
-  top: 42%; /* Adjust the vertical position if necessary */
+  top: 34%;
 }
 
 .JoinConfirmPw {
   background-image: url("../Img/FoodJoin/JoinConfirmPw.png");
-  top: 54%; /* Adjust the vertical position if necessary */
+  top: 46%;
 }
 
 .JoinNick {
   background-image: url("../Img/FoodJoin/JoinNick.png");
-  top: 66%; /* Adjust the vertical position if necessary */
+  top: 58%;
 }
 
 .JoinPhoneN {
   background-image: url("../Img/FoodJoin/JoinPW.png");
-  top: 78%; /* Adjust the vertical position if necessary */
+  top: 70%;
 }
+
 .JoinAddr {
   background-image: url("../Img/FoodJoin/JoinAddress.png");
+  top: 82%;
+}
+
+.JoinAddrBt {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .JoinBt {
   background-image: url("../Img/FoodJoin/JoinBt.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   border-style: none;
   background-color: transparent;
   position: absolute;
-  bottom: 5%;
+  left: 50%;
+  bottom: -2%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 60px;
 }
 
-.JoinAddr {
+.AddressFindBt {
+  background-image: url("../Img/FoodJoin/JoinAddrFindBt.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-style: none;
+  background-color: transparent;
   position: absolute;
-  top: 90%;
+  left: 80%;
+  bottom: 6%;
+  width: 150px;
+  height: 45px;
+}
+
+.PopupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PopupContent {
+  position: fixed;
+  width: 400px;
+  height: 500px;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  z-index: 100000;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.ClosePopupButton {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 반응형 CSS */
+/* 모바일 */
+@media (max-width: 767px) {
+  .JoinImg {
+    background-color:#FFCD4A;
+    background-image: none;
+    background-size: 100%;
+  }
+  .JoinEmail {
+    width: 750px;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    background-size: 100% 100%;
+
+  }
+
+  .JoinPW {
+    width: 750px;
+    position: absolute;
+    top: 40%;
+    left: 100%;
+    background-size: 100% 100%;
+  }
+
+  .JoinConfirmPw {
+    width: 750px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    background-size: 100% 100%;
+  }
+
+  .JoinNick {
+    width: 750px;
+    position: absolute;
+    top: 60%;
+    left: 100%;
+    background-size: 100% 100%;
+  }
+
+  .JoinPhoneN {
+    width: 750px;
+    position: absolute;
+    top: 70%;
+    left: 100%;
+    background-size: 100% 100%;
+  }
+
+  .JoinAddr {
+    width: 750px;
+    position: absolute;
+    top: 80%;
+    left: 100%;
+    background-size: 100% 100%;
+  }
+
+  .JoinEmail input,
+  .JoinPW input,
+  .JoinConfirmPw input,
+  .JoinNick input,
+  .JoinPhoneN input,
+  .JoinAddrtxt input {
+    width: 80%;
+  }
+
+}
+
+/* 테블릿 세로 */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .JoinEmail,
+  .JoinPW,
+  .JoinConfirmPw,
+  .JoinNick,
+  .JoinPhoneN,
+  .JoinAddr {
+    width: 70%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    margin-top: 20px;
+  }
+
+  .JoinEmail,
+  .JoinPW,
+  .JoinConfirmPw,
+  .JoinNick,
+  .JoinPhoneN,
+  .JoinAddrtxt input {
+    width: 100%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    margin-top: 20px;
+  }
+}
+
+/* 테블릿 가로 */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .JoinEmail,
+  .JoinPW,
+  .JoinConfirmPw,
+  .JoinNick,
+  .JoinPhoneN,
+  .JoinAddr {
+    width: 60%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    margin-top: 20px;
+  }
+
+  .JoinEmail,
+  .JoinPW,
+  .JoinConfirmPw,
+  .JoinNick,
+  .JoinPhoneN,
+  .JoinAddrtxt input {
+    width: 100%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    margin-top: 20px;
+  }
 }

@@ -39,13 +39,20 @@ const FoodJoin = () => {
                     <input type="text" id="PhNum" placeholder="Phone Number" required />
                 </div>
                 <div className={style.JoinAddr}>
-                    <input type="text" id="Address" placeholder="Address" required />
+                    {/* Display the selected address */}
+                    {address.jibunAddress && (
+                        <div className={style.JoinAddrtxt} >
+                            <input type='text' readOnly value={`${address.postcode} ${address.roadAddress} ${address.extraAddress}`} />
+                            {/* <p>Jibun Address: {address.jibunAddress}</p> */}
+                        </div>
+                    )}
                 </div>
+                {/* 가입 버튼 */}
+                <button className={style.JoinBt} onClick={handleJoinButtonClick} />
                 {/* 주소 검색 컴포넌트를 사용하고, setAddress 함수를 전달하여 주소 정보를 업데이트 */}
-                
+                <FoodAddr setAddress={setAddress} />
             </div>
-            {/* 가입 버튼 */}
-            <button className={style.JoinBt} onClick={handleJoinButtonClick} />
+
         </main>
     );
 };
