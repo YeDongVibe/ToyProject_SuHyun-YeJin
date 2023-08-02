@@ -164,6 +164,7 @@
 
 
 /* FoodSearch */
+
 .Searchall {
   position: absolute;
   top: 15%;
@@ -348,6 +349,8 @@ input[type=checkbox] {
 
 
 /* FoodLogin */
+/* Food.module.css */
+
 /* 기본 CSS */
 .LoginBackImg {
   background-image: url("../Img/FoodLogin/LoginBackImg.png");
@@ -585,6 +588,7 @@ input[type=checkbox] {
   text-align: center;
 }
 
+/* 기본 스타일 */
 td {
   padding: 5px;
 }
@@ -638,4 +642,93 @@ td {
     left: 50%;
     transform: translateX(-50%);
   }
+}
+
+/* FoodJoin & FoodAddr*/
+.JoinImg {
+  background-image: url("../Img/FoodJoin/JoinbackImg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.JoinEmail,
+.JoinPW,
+.JoinConfirmPw,
+.JoinNick,
+.JoinPhoneN,
+.JoinAddr {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px; /* 이미지의 가로 크기에 맞게 조정 */
+  height: 80px; /* 이미지의 세로 크기에 맞게 조정 */
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.JoinEmail input,
+.JoinPW input,
+.JoinConfirmPw input,
+.JoinNick input,
+.JoinPhoneN input,
+.JoinAddr input {
+  width: 830px;
+  height: 70px;
+  border-style: none;
+  background-color: transparent;
+  position: absolute;
+  left: 30%;
+  top: 6%;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Set specific background images for each input */
+.JoinEmail {
+  background-image: url("../Img/FoodJoin/JoinEmail.png");
+  top: 30%; /* Adjust the vertical position if necessary */
+}
+
+.JoinPW {
+  background-image: url("../Img/FoodJoin/JoinPW.png");
+  top: 42%; /* Adjust the vertical position if necessary */
+}
+
+.JoinConfirmPw {
+  background-image: url("../Img/FoodJoin/JoinConfirmPw.png");
+  top: 54%; /* Adjust the vertical position if necessary */
+}
+
+.JoinNick {
+  background-image: url("../Img/FoodJoin/JoinNick.png");
+  top: 66%; /* Adjust the vertical position if necessary */
+}
+
+.JoinPhoneN {
+  background-image: url("../Img/FoodJoin/JoinPW.png");
+  top: 78%; /* Adjust the vertical position if necessary */
+}
+.JoinAddr {
+  background-image: url("../Img/FoodJoin/JoinAddress.png");
+}
+
+.JoinBt {
+  background-image: url("../Img/FoodJoin/JoinBt.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-style: none;
+  background-color: transparent;
+  position: absolute;
+  bottom: 5%;
+}
+
+.JoinAddr {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
