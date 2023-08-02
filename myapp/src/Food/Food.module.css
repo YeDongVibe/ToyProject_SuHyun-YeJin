@@ -350,9 +350,6 @@ input[type=checkbox] {
 
 
 /* FoodLogin */
-/* Food.module.css */
-
-/* 기본 CSS */
 .LoginBackImg {
   background-image: url("../Img/FoodLogin/LoginBackImg.png");
   background-size: cover;
@@ -582,7 +579,8 @@ input[type=checkbox] {
 /* FoodList */
 .ListAll {
   position: absolute;
-  top: 10%;
+  top: 7%;
+  margin-left: 2%;
 }
 
 .ListRow {
@@ -738,6 +736,14 @@ td {
   transform: translate(-50%, -50%);
   width: 200px;
   height: 60px;
+}
+.moreAddr {
+  position: absolute;
+  bottom: 15%;
+  width: 90%;
+  border-color: black;
+  font-size: 15px;
+  text-align: center;
 }
 
 .AddressFindBt {

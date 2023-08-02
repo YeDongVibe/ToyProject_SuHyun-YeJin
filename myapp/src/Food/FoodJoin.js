@@ -1,7 +1,5 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import style from "./Food.module.css";
-
-
 import FoodAddr from "./FoodAddr";
 
 const FoodJoin = () => {
@@ -18,6 +16,10 @@ const FoodJoin = () => {
         // 이 정보를 활용하여 가입 처리를 하시면 됩니다.
 
         console.log('가입 버튼 클릭 - 주소 정보:', address);
+    };
+
+    const handleAddressChange = (data) => {
+        setAddress(data);
     };
 
     return (
@@ -42,15 +44,15 @@ const FoodJoin = () => {
                     {/* Display the selected address */}
                     {address.jibunAddress && (
                         <div className={style.JoinAddrtxt} >
-                            <input type='text' readOnly value={`${address.postcode} ${address.roadAddress} ${address.extraAddress}`} />
-                            {/* <p>Jibun Address: {address.jibunAddress}</p> */}
+                            {/* 텍스트로 주소 정보 표시 */}
+                            <input type='text' readOnly value={`${address.postcode} ${address.roadAddress} ${address.extraAddress} ${address.extraAddress}`} />
                         </div>
                     )}
                 </div>
                 {/* 가입 버튼 */}
                 <button className={style.JoinBt} onClick={handleJoinButtonClick} />
                 {/* 주소 검색 컴포넌트를 사용하고, setAddress 함수를 전달하여 주소 정보를 업데이트 */}
-                <FoodAddr setAddress={setAddress} />
+                <FoodAddr setAddress={handleAddressChange} />
             </div>
 
         </main>
