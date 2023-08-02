@@ -23,6 +23,11 @@ const FoodAddr = ({ setAddress }) => {
     setShowPopup(false);
   };
 
+  const handleSubmit = () => {
+    // Perform any additional logic or submit actions here before closing the popup
+    handleClosePopup();
+  };
+
   return (
     <main>
       {/* Address search button */}
@@ -32,10 +37,16 @@ const FoodAddr = ({ setAddress }) => {
       {showPopup && (
         <div className={style.PopupOverlay}>
           <div className={style.PopupContent}>
+
             <DaumPostcode onComplete={handleComplete} autoClose={true} animation={true} />
-            <button className={style.ClosePopupButton} onClick={handleClosePopup}>
-              close
-            </button>
+            <div className={style.ButtonGroup}>
+              <button className={style.ClosePopupButton} onClick={handleClosePopup}>
+                닫기
+              </button>
+              <button className={style.SubmitButton} onClick={handleSubmit}>
+                제출
+              </button>
+            </div>
           </div>
         </div>
       )}
