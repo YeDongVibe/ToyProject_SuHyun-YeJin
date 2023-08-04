@@ -6,7 +6,6 @@ const FoodNav = () => {
   return (
     <div className={style.NavAll}>
       <ul className={style.NavSubtop}>
-        <li></li>
         <li>
           <Link to={"/"} className={style.NavSub}>
             Main
@@ -30,6 +29,11 @@ const FoodNav = () => {
         <li>
           <Link to={"/FoodLogin"} className={style.NavSub}>
             Login
+          </Link>
+        </li>
+        <li>
+          <Link to={"/FoodJoin"} className={style.NavSub}>
+            Join
           </Link>
         </li>
       </ul>

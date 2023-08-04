@@ -1,27 +1,25 @@
 import { Link } from "react-router-dom"
-
-import style from "./Food.module.css"
-import MainCenterImg from "../Img/FoodMain/MainCenterImg.png"
-import MainTextImg from "../Img/FoodMain/MainTextImg.png"
-import MainButtonImg from "../Img/FoodMain/MainButtonImg.png"
+import style from './Food.module.css';
+import Maintxt from "../Img/FoodMain/Maintxt.png"
+import MainCenter from "../Img/FoodMain/MainCenter.png"
+import MainBt from "../Img/FoodMain/MainBt.png"
 
 const FoodMain = () => {
 
     return (
-        <main>
-            <div className={style.MainImg}>
-                <div className={style.CenterCon}>
-                    <img src={MainCenterImg} alt="MainCenterImg" className={style.MainCenterImg} />
-                    <img src={MainTextImg} alt="MainTextImg" className={style.Maintext} />
-                </div>
-                <Link to="/FoodList">
-                    <div>
-                        <img src={MainButtonImg} alt="MainButtonImg" className={style.MainButtonImg} />
-                    </div>
-                </Link>
-            </div>
 
-        </main>
+        <div className={style.MainDesk}>
+            <div className={style.MainBack}>
+                <div className={style.AllMain}>
+                    <img className={style.Maintxt} alt="Maintxt" src={Maintxt} />
+                    <img className={style.MainCenter} alt="Maincenterimg" src={MainCenter} />
+                    <Link to="/FoodList">
+                        <img className={style.MainBt} alt="Main button img" src={MainBt} />
+                    </Link>
+                </div>
+            </div>
+        </div>
+
     )
 }
 

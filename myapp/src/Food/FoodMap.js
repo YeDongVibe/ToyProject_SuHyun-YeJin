@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
+import style from './Food.module.css';
 
 const FoodMap = ({ foodList, selectedFoodId }) => {
   const [state, setState] = useState({
@@ -9,6 +10,7 @@ const FoodMap = ({ foodList, selectedFoodId }) => {
     },
     errMsg: null,
     isLoading: true,
+    isMapVisible: false, // 추가된 상태 변수: 지도 보이기 여부를 관리
   });
 
   useEffect(() => {
@@ -66,34 +68,78 @@ const FoodMap = ({ foodList, selectedFoodId }) => {
     }
   }, [selectedFood]);
 
+  const getCurrentLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setState((prev) => ({
+            ...prev,
+            center: {
+              lat: latitude,
+              lng: longitude,
+            },
+          }));
+        },
+        (err) => {
+          console.error("Error getting current location:", err);
+        }
+      );
+    } else {
+      console.error("Geolocation is not available.");
+    }
+  };
+
+  const handleMapToggle = () => { // 지도 띄우기(반응형 위한)
+    setState((prev) => ({
+      ...prev,
+      isMapVisible: !prev.isMapVisible,
+    }));
+  };
+
+  const handleCloseMap = () => { // 지도 닫기 버튼 클릭 핸들러
+    setState((prev) => ({
+      ...prev,
+      isMapVisible: false,
+    }));
+  };
+
   return (
     <main>
-      <Map
-        center={state.center}
-        style={{
-          width: "600px",
-          height: "500px",
-          position: 'absolute',
-          top: '50%',
-          right: '5%',
-          transform: 'translate(0, -50%)',
-        }}
-        level={3}
-      >
-        {!state.isLoading && (
-          <>
-            {/* Marker for the user's current location */}
-            <MapMarker position={state.center} />
-            {/* Marker for the selected food location */}
-            {markers.map((marker) => (
-              <MapMarker
-                key={marker.id}
-                position={{ lat: marker.latitude, lng: marker.longitude }}
-              />
-            ))}
-          </>
-        )}
-      </Map>
+      {selectedFood && (
+        <div>
+          <button onClick={handleMapToggle} className={style.MapSeeBt}>지도보기</button>
+        </div>
+      )}
+      {state.isMapVisible && (
+        <div className={style.PopupOverlay}>
+          <div className={style.PopupContent}>
+            <button className={style.CloseButton} onClick={handleCloseMap}>닫기</button> {/* 닫기 버튼 */}
+            <button className={style.MapMyPosi} onClick={getCurrentLocation}>내 위치로</button>
+            <Map
+              center={state.center}
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+              level={3}
+            >
+              {!state.isLoading && (
+                <>
+                  <MapMarker position={state.center} />
+                  {markers.map((marker) => (
+                    <MapMarker
+                      key={marker.id}
+                      position={{ lat: marker.latitude, lng: marker.longitude }}
+                    />
+                  ))}
+                </>
+              )}
+            </Map>
+
+          </div>
+        </div>
+      )}
     </main>
   );
 };

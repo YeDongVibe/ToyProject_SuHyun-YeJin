@@ -3,6 +3,7 @@ import style from "./Food.module.css";
 import FoodAddr from "./FoodAddr";
 import axios from 'axios';
 
+
 const FoodJoin = () => {
     const [address, setAddress] = useState({
         postcode: '',
@@ -31,9 +32,9 @@ const FoodJoin = () => {
             userAddressDetail
         };
         axios.post('http://localhost:4000/api/auth/signUp', data)
-            .then((res) => {                
+            .then((res) => {
             })
-            .catch((err) => {                
+            .catch((err) => {
             });
 
     };
@@ -60,21 +61,18 @@ const FoodJoin = () => {
                 <div className={style.JoinPhoneN}>
                     <input type="text" id="PhNum" placeholder="Phone Number" onChange={(e) => setUserPhoneNumber(e.target.value)} required />
                 </div>
-
                 <div className={style.JoinAddr}>
-                    {/* Display the selected address */}
                     {address.jibunAddress && (
                         <div className={style.JoinAddrtxt} >
-                            {/* 텍스트로 주소 정보 표시 */}
                             <input type='text' readOnly value={`${address.roadAddress} ${address.extraAddress}`} onChange={(e) => setUserAddress(e.target.value)} />
                         </div>
                     )}
                 </div>
                 {/* 가입 버튼 */}
                 <button className={style.JoinBt} onClick={handleJoinButtonClick} />
-                {/* 주소 검색 컴포넌트를 사용하고, setAddress 함수를 전달하여 주소 정보를 업데이트 */}
-                <FoodAddr setAddress={handleAddressChange} />
             </div>
+            {/* 주소 검색 컴포넌트를 사용하고, setAddress 함수를 전달하여 주소 정보를 업데이트 */}
+            <FoodAddr setAddress={handleAddressChange} />
 
         </main>
     );

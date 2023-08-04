@@ -27,90 +27,113 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'HallymGothic-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* FoodMain */
-.MainImg {
-  background-image: url("../Img/FoodMain/FoodMainBack.png");
+.AllMain {
+  background-image: url("../Img/FoodMain/MainBack.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-  position: relative;
 }
 
-.MainCenterImg {
-  width: 450px;
-  height: 445px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-
-  /* 반응형 스타일 */
-  @media (max-width: 767px) {
-    width: 90%;
-    height: auto;
-    max-width: 450px;
-  }
-
-  @media (min-width: 768px) and (max-width: 991px) {
-    width: 70%;
-    height: auto;
-    max-width: 450px;
-  }
-
-  @media (min-width: 992px) and (max-width: 1199px) {
-    width: 50%;
-    height: auto;
-    max-width: 450px;
-  }
-}
-
-.Maintext {
+.Maintxt {
   width: 400px;
   height: 120px;
   position: absolute;
-  top: 10%;
+  top: 9%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
 
-  /* 반응형 스타일 */
-  @media (max-width: 767px) {
+/* 반응형 스타일 */
+@media (max-width: 767px) {
+  .Maintxt {
     width: 80%;
     height: auto;
     max-width: 400px;
   }
+}
 
-  @media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
+  .Maintxt {
     width: 60%;
     height: auto;
     max-width: 400px;
   }
+}
 
-  @media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
+  .Maintxt {
     width: 40%;
     height: auto;
     max-width: 400px;
   }
 }
 
-.MainButtonImg {
+.MainCenter {
+  width: 450px;
+  height: 445px;
   position: absolute;
-  width: 200px;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 767px) {
+  .MainCenter {
+    width: 90%;
+    height: auto;
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .MainCenter {
+    width: 70%;
+    height: auto;
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .MainCenter {
+    width: 50%;
+    height: auto;
+    max-width: 450px;
+  }
+}
+
+.MainBt {
+  position: absolute;
+  width: 250px;
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
+}
 
-  /* 반응형 스타일 */
-  @media (max-width: 767px) {
+/* 반응형 스타일 */
+@media (max-width: 767px) {
+  .MainBt {
     width: 150px;
   }
+}
 
-  @media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
+  .MainBt {
     width: 180px;
   }
+}
 
-  @media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
+  .MainBt {
     width: 160px;
   }
 }
@@ -119,16 +142,17 @@
 .NavAll {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: fixed;
   top: 0;
   left: 7px;
   width: 100%;
   z-index: 9999;
+}
 
-
-  /* 반응형 스타일 */
-  @media screen and (max-width: 767px) {
+/* 반응형 스타일 */
+@media screen and (max-width: 767px) {
+  .NavAll {
     flex-direction: column;
     align-items: center;
   }
@@ -140,9 +164,11 @@
   justify-content: flex-end;
   padding: 0;
   font-family: 'LeferiPoint-BlackA';
+}
 
-  /* 반응형 스타일 */
-  @media screen and (max-width: 767px) {
+/* 반응형 스타일 */
+@media screen and (max-width: 767px) {
+  .NavSubtop {
     align-items: center;
     position: absolute;
     top: 10%;
@@ -154,200 +180,163 @@
   text-decoration: none;
   color: coral;
   padding-right: 10px;
+}
 
-  /* 반응형 스타일 */
-  @media screen and (max-width: 767px) {
+/* 반응형 스타일 */
+@media screen and (max-width: 767px) {
+  .NavSub {
     display: flex;
     justify-content: flex-end;
-    margin: 2px;
-
   }
 }
 
-/* FoodSearch */
-
-.Searchall {
+/* FoodMap */
+.MapMyPosi {
   position: absolute;
-  top: 15%;
-  left: 13%;
-  transform: translate(-50%, 0%);
+  bottom: 18%;
+  right: 3%;
+  color: white;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom-color: rgba(0, 0, 0, 0.34);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.34) inset,
+    0 2px 0 -1px rgba(0, 0, 0, 0.13),
+    0 3px 0 -1px rgba(0, 0, 0, 0.08),
+    0 3px 13px -1px rgba(0, 0, 0, 0.21);
+  border-color: #f0c014;
+  background-color: #f0d264;
+  padding: 5px 10px;
+  /* This part is unnecessary as it's repeated twice */
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  /* Using '30' for font-weight is invalid, use 'bold' instead */
 }
 
-.Searchsub {
-  margin: 10px;
+.MapSeeBt {
+  color: white;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom-color: rgba(0, 0, 0, 0.34);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.34) inset,
+    0 2px 0 -1px rgba(0, 0, 0, 0.13),
+    0 3px 0 -1px rgba(0, 0, 0, 0.08),
+    0 3px 13px -1px rgba(0, 0, 0, 0.21);
+  border-color: #f0c014;
+  background-color: #f0d264;
+  padding: 5px 10px;
+  margin: 3px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
-/* FoodFound */
-.FoundImg {
-  background-image: url("../Img/FoodFound/FoundBackImg.png");
+/* FoodList */
+.ListImg {
+  background-image: url("../Img/FoodList/ListBackImg.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
   height: 100vh;
   position: relative;
 }
 
-.FoundText1 {
-  font-family: 'KIMM_Bold';
-  letter-spacing: 10px;
+.PageBt {
   position: absolute;
-  top: 8%;
-  left: 1%;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.FoundText2 {
-  font-family: 'KIMM_Bold';
-  letter-spacing: 10px;
+.ListCateBtPo {
   position: absolute;
-  top: 16%;
-  left: 3%;
+  top: 9%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-input[type=checkbox] {
-  zoom: 1.5;
-}
-
-.checkboxLabel {
-  font-family: 'KIMM_Bold';
-  font-size: 25px;
-}
-
-.FoodFoundChkdiv {
-  display: inline-flex;
+.Listdiv {
   position: absolute;
-  line-height: 40px;
-  top: 26%;
-  left: 3%;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  line-height: auto;
+  font-family: 'HallymGothic-Regular';
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-align: center;
 }
 
-.FoundText3 {
-  font-family: 'KIMM_Bold';
-  letter-spacing: 10px;
-  position: absolute;
-  top: 16%;
-  left: 30%;
+.Listtabel {
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  table-layout: fixed;
 }
 
-.FoodFoundChkdiv2 {
-  display: inline-flex;
-  position: absolute;
-  line-height: 40px;
-  top: 26%;
-  left: 30%;
-}
-
-.FoundFindBt {
-  width: 200px;
-  height: 60px;
-  position: absolute;
-  bottom: 10%;
-  right: 5%;
-}
-
-/* 모바일 화면 */
-@media (max-width: 767px) {
-  .FoundText1 {
-    font-size: 15px;
-    letter-spacing: 4px;
-  }
-
-  .FoundText2 {
-    font-size: 15px;
-    letter-spacing: 4px;
-  }
-
-  .FoundText3 {
-    font-size: 15px;
-    letter-spacing: 4px;
-    left: 45%;
-  }
-
-  .FoodFoundChkdiv {
-    flex-direction: column;
-    line-height: 10px;
-    top: 26%;
-    left: 2%;
-  }
-
-  .checkboxLabel {
-    font-size: 13px;
-  }
-
-  .FoodFoundChkdiv2 {
-    flex-direction: column;
-    top: 26%;
-    left: 60%;
-    transform: translateX(-50%);
-  }
-
-  .FoundFindBt {
-    width: 100px;
-    height: 30px;
-    position: absolute;
-    bottom: 3%;
-    right: 10%;
+@media screen and (max-width: 580px) {
+  Listdiv {
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
-/* 테블릿 세로 화면 */
-@media (min-width: 768px) and (max-width: 991px) {
-
-  .FoundText1 {
-    top: 7%;
-    left: 3%;
+@media screen and (max-width: 580px) {
+  .Listtabel {
+    display: block;
   }
-
-  .FoundText2 {
-    top: 15%;
-    left: 5%;
-  }
-
-  .FoundText3 {
-    top: 15%;
-    left: 45%;
-  }
-
-  .FoodFoundChkdiv {
-    top: 23%;
-  }
-
-  .FoodFoundChkdiv2 {
-    top: 23%;
-    left: 46%;
-  }
-
 }
 
-/* 테블릿 가로 화면 */
-@media (min-width: 992px) and (max-width: 1199px) {
+.Listhead {
+  color: #fff;
+  background: #f0d264;
+  text-align: center;
+}
 
-  .FoundImg {
-    height: 100vh;
-  }
-
-  .FoundText1 {
-    top: 8%;
-    left: 2%;
-  }
-
-  .FoundText2 {
-    top: 17%;
-    left: 4%;
-  }
-
-  .FoundText3 {
-    top: 17%;
-    left: 40%;
-  }
-
-  .FoodFoundChkdiv2 {
-    top: 26%;
-    left: 42%;
-  }
-
+.Listcell {
+  border-bottom: 1px solid #c99d00;
+  padding: 10px;
 }
 
 
+.ListCateBt {
+  color: white;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom-color: rgba(0, 0, 0, 0.34);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.34) inset,
+    0 2px 0 -1px rgba(0, 0, 0, 0.13),
+    0 3px 0 -1px rgba(0, 0, 0, 0.08),
+    0 3px 13px -1px rgba(0, 0, 0, 0.21);
+  border-color: #f0c014;
+  background-color: #f0d264;
+  padding: 5px 10px;
+  margin: 3px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.active-ListCateBt {
+  color: white;
+  top: 4px;
+  border-color: 1px rgba(0, 0, 0, 0.20) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.10);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.89), 0 1px rgba(0, 0, 0, 0.05) inset;
+  position: relative;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom-color: rgba(0, 0, 0, 0.34);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  background-color: #D6BB59;
+  padding: 5px 10px;
+  margin: 1px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
 
 /* FoodLogin */
 .LoginBackImg {
@@ -362,70 +351,169 @@ input[type=checkbox] {
   align-items: center;
 }
 
-.LoginsubId {
+.Inputdiv {
   position: absolute;
-  top: 20%;
+  top: 35%;
   left: 50%;
-  transform: translateX(-50%);
-  background-image: url("../Img/FoodLogin/Login.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.LoginsubId input {
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border-style: none;
-  width: 470px;
-  height: 90px;
-  text-align: center;
-  font-size: 30px;
+/* 반응형 스타일 */
+@media (max-width: 767px) {
+  .Inputdiv {
+    width: 80%;
+    height: auto;
+    max-width: 400px;
+    top: 40%;
+  }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .Inputdiv {
+    width: 70%;
+    height: auto;
+    top: 40%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .Inputdiv {
+    width: 80%;
+    height: auto;
+    top: 35%;
+  }
+}
+
+.LoginsubId,
 .LoginsubPw {
-  position: absolute;
-  top: 34%;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
   background-image: url("../Img/FoodLogin/Login.png");
   background-size: cover;
   background-repeat: no-repeat;
+  align-items: center;
+  margin-bottom: 2%;
 }
 
+/* 반응형 스타일 */
+@media (max-width: 767px) {
+
+  .LoginsubId,
+  .LoginsubPw {
+    background-size: cover;
+    width: 90%;
+    height: 55px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .LoginsubId,
+  .LoginsubPw {
+    width: 90%;
+    height: 100px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .LoginsubId,
+  .LoginsubPw {
+    width: 90%;
+    height: 138px;
+  }
+}
+
+.LoginsubId input,
 .LoginsubPw input {
   background-color: transparent;
   background-repeat: no-repeat;
   border-style: none;
-  width: 470px;
-  height: 90px;
+  width: 560px;
+  height: 110px;
   text-align: center;
   font-size: 30px;
 }
 
+/* 반응형 스타일 */
+@media (max-width: 767px) {
+
+  .LoginsubId input,
+  .LoginsubPw input {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .LoginsubId input,
+  .LoginsubPw input {
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .LoginsubId input,
+  .LoginsubPw input {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .LoginBt {
   position: absolute;
-  bottom: 32%;
-  width: 400px;
-  height: 120px;
+  bottom: 38%;
+  width: 335px;
+  height: 100px;
   left: 50%;
   transform: translateX(-50%);
   background-image: url("../Img/FoodLogin/LoginBt.png");
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
   border-style: none;
   background-color: transparent;
 }
 
+/* 반응형 스타일 */
+@media (max-width: 767px) {
+  .LoginBt {
+    width: 40%;
+    height: 5.5%;
+    max-width: 400px;
+    bottom: 45%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .LoginBt {
+    width: 40%;
+    height: 8.5%;
+    bottom: 41%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .LoginBt {
+    width: 40%;
+    height: 10.5%;
+  }
+}
+
 .LoginCreate {
   position: absolute;
-  bottom: 7%;
-  width: 350px;
-  height: 100px;
+  bottom: 20%;
+  width: 265px;
+  height: 80px;
   left: 50%;
   transform: translateX(-50%);
   background-image: url("../Img/FoodLogin/LoginCreate.png");
-  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border-style: none;
@@ -441,217 +529,28 @@ input[type=checkbox] {
   transform: translate(-50%, 50%);
 }
 
-/* 반응형 조건 */
+/* 반응형 스타일 */
 @media (max-width: 767px) {
-
-  /* 모바일 */
-  .LoginsubId,
-  .LoginsubPw,
-  .LoginBt,
-  .LoginCreate,
   .LoginsubBack {
-    left: 50%;
-    transform: translateX(-50%);
+    width: 90%;
+    height: 30%;
+    max-width: 400px;
   }
+}
 
-  .LoginsubId input,
-  .LoginsubPw input {
-    font-size: 19px;
-    width: 99%;
-    /* 크기 조정을 위한 추가 */
-    height: 99%;
-    /* 크기 조정을 위한 추가 */
-    background-size: cover;
-    text-align: center;
-  }
-
-  .LoginsubId {
-    top: 22%;
-    background-position: center;
-    background-size: 100%;
-    width: 330px;
-    height: 71px;
-
-  }
-
-  .LoginsubPw {
-    top: 31%;
-    background-position: center;
-    background-size: 100%;
-    width: 330px;
-    height: 71px;
-  }
-
-  .LoginBt {
-    bottom: 47%;
-    background-size: 60%;
-  }
-
-  .LoginCreate {
-    bottom: 20%;
-  }
-
+@media (min-width: 768px) and (max-width: 991px) {
   .LoginsubBack {
-    top: 17%;
     width: 100%;
     height: 40%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-
-  /* 테블릿 세로 */
-  .LoginsubId,
-  .LoginsubPw,
-  .LoginBt,
-  .LoginCreate,
-  .LoginsubBack {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .LoginsubId input,
-  .LoginsubPw input {
-    font-size: 30px;
-  }
-
-  .LoginsubId {
-    top: 27%;
-  }
-
-  .LoginsubPw {
-    top: 37%;
-  }
-
-  .LoginBt {
-    top: 48%;
-  }
-
-  .LoginCreate {
-    bottom: 17%;
-  }
-
-  .LoginsubBack {
-    top: 22%;
-  }
-}
-
 @media (min-width: 992px) and (max-width: 1199px) {
-
-  /* 테블릿 가로 */
-  .LoginsubId,
-  .LoginsubPw,
-  .LoginBt,
-  .LoginCreate,
   .LoginsubBack {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .LoginsubId input,
-  .LoginsubPw input {
-    font-size: 30px;
-  }
-
-  .LoginsubId {
-    top: 25%;
-  }
-
-  .LoginsubPw {
-    top: 38%;
-  }
-
-  .LoginBt {
-    bottom: 32%;
-  }
-
-  .LoginCreate {
-    bottom: 12%;
-    background-size: 70%;
-  }
-
-  .LoginsubBack {
-    top: 18%;
+    width: 100%;
+    height: 50%;
   }
 }
-
-
-/* FoodList */
-.ListAll {
-  position: absolute;
-  top: 7%;
-  margin-left: 2%;
-}
-
-.ListRow {
-  font-family: 'ChosunGu';
-  font-size: 17px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-/* 기본 스타일 */
-td {
-  padding: 5px;
-}
-
-.PageBt {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* 모바일 */
-@media (max-width: 767px) {
-  .ListRow {
-    font-size: 14px;
-    top: 20%;
-    left: 1%;
-  }
-
-  .PageBt {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .Mapdiv {
-    position: relative;
-    margin-top: 20px;
-  }
-}
-
-/* 테블릿 세로 */
-@media (min-width: 768px) and (max-width: 991px) {
-  .ListRow {
-    top: 20%;
-    left: 1%;
-  }
-
-  .Mapdiv {
-    position: relative;
-    margin-top: 20px;
-  }
-}
-
-/* 테블릿 가로 */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .ListRow {
-    top: 20%;
-    left: 1%;
-  }
-
-  .Mapdiv {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
 
 /* FoodJoin & FoodAddr */
 .JoinImg {
@@ -662,20 +561,53 @@ td {
   position: relative;
 }
 
+.JoinAll {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.JoinEmail {
+  background-image: url("../Img/FoodJoin/JoinEmail.png");
+}
+
+.JoinPW {
+  background-image: url("../Img/FoodJoin/JoinPW.png");
+}
+
+.JoinConfirmPw {
+  background-image: url("../Img/FoodJoin/JoinConfirmPw.png");
+}
+
+.JoinNick {
+  background-image: url("../Img/FoodJoin/JoinNick.png");
+}
+
+.JoinPhoneN {
+  background-image: url("../Img/FoodJoin/JoinPW.png");
+}
+
+.JoinAddr {
+  background-image: url("../Img/FoodJoin/JoinAddress.png");
+}
+
 .JoinEmail,
 .JoinPW,
 .JoinConfirmPw,
 .JoinNick,
 .JoinPhoneN,
-.JoinAddr {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1200px;
-  height: 75px;
-  background-size: 100% 100%;
+.JoinAddr,
+.JoinAddrtxt {
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-bottom: 1%;
+  width: 1250px;
+  height: 90px;
 }
 
 .JoinEmail input,
@@ -684,75 +616,25 @@ td {
 .JoinNick input,
 .JoinPhoneN input,
 .JoinAddrtxt input {
-  width: 830px;
-  height: 70px;
-  border-style: none;
   background-color: transparent;
-  position: absolute;
-  left: 30%;
-  top: 3%;
+  background-size: contain;
+  border-style: none;
+  width: 99%;
+  height: 99%;
+  text-align: end;
+  font-size: 45px;
   font-family: 'omyu_pretty';
-  font-size: 29px;
-  text-align: center;
-}
-
-.JoinEmail {
-  background-image: url("../Img/FoodJoin/JoinEmail.png");
-  top: 22%;
-}
-
-.JoinPW {
-  background-image: url("../Img/FoodJoin/JoinPW.png");
-  top: 34%;
-}
-
-.JoinConfirmPw {
-  background-image: url("../Img/FoodJoin/JoinConfirmPw.png");
-  top: 46%;
-}
-
-.JoinNick {
-  background-image: url("../Img/FoodJoin/JoinNick.png");
-  top: 58%;
-}
-
-.JoinPhoneN {
-  background-image: url("../Img/FoodJoin/JoinPW.png");
-  top: 70%;
-}
-
-.JoinAddr {
-  background-image: url("../Img/FoodJoin/JoinAddress.png");
-  top: 82%;
-}
-
-.JoinAddrBt {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .JoinBt {
   background-image: url("../Img/FoodJoin/JoinBt.png");
-  background-size: 100% 100%;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   border-style: none;
   background-color: transparent;
-  position: absolute;
-  left: 50%;
-  bottom: -2%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 60px;
-}
-.moreAddr {
-  position: absolute;
-  bottom: 15%;
-  width: 90%;
-  border-color: black;
-  font-size: 15px;
-  text-align: center;
+  width: 300px;
+  height: 120px;
 }
 
 .AddressFindBt {
@@ -763,8 +645,8 @@ td {
   border-style: none;
   background-color: transparent;
   position: absolute;
-  left: 80%;
-  bottom: 6%;
+  left: 75%;
+  bottom: 12%;
   width: 150px;
   height: 45px;
 }
@@ -795,6 +677,7 @@ td {
   overflow: hidden;
   padding: 20px;
 }
+
 .ClosePopupButton {
   margin-top: 10px;
   font-size: 16px;
@@ -804,6 +687,7 @@ td {
   left: 43%;
   transform: translate(-50%, -50%);
 }
+
 .SubmitButton {
   margin-top: 10px;
   font-size: 16px;
@@ -812,4 +696,22 @@ td {
   bottom: 1%;
   left: 55%;
   transform: translate(-50%, -50%);
+}
+
+.moreAddr {
+  position: absolute;
+  bottom: 15%;
+  width: 90%;
+  border-color: black;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* FoodFound */
+.FoundImg {
+  background-image: url("../Img/FoodFound/FoundBackImg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
 }
