@@ -17,6 +17,9 @@
   * Font : Javascript, React, Css
   * Back : SpringBoot, MySQL,
 
+**구조**
+![서비스구조](https://github.com/YeDongVibe/ToyProject_SuHyun-YeJin/assets/129818886/b3079cf8-f2ba-4f28-841e-d47b8902184b)
+
 **23.07.24 토이프로젝트 주제 선정: 부산광역시 음식점 정보제공 서비스**
   * Front-end: 웹 디자인 구상, 프래임 구성
   * Back-end: 공공데이터 csv 다운 및 전처리 후 데이터베이스 1차저장
