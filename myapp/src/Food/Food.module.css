@@ -34,6 +34,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'SunBatang-Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* FoodMain */
 .AllMain {
   background-image: url("../Img/FoodMain/MainBack.png");
@@ -194,7 +201,8 @@
 .MapMyPosi {
   position: absolute;
   bottom: 18%;
-  right: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   display: inline-block;
   border: 1px solid rgba(0, 0, 0, 0.21);
@@ -207,11 +215,9 @@
   border-color: #f0c014;
   background-color: #f0d264;
   padding: 5px 10px;
-  /* This part is unnecessary as it's repeated twice */
   cursor: pointer;
   border-radius: 10px;
   font-weight: bold;
-  /* Using '30' for font-weight is invalid, use 'bold' instead */
 }
 
 .MapSeeBt {
@@ -226,7 +232,31 @@
     0 3px 13px -1px rgba(0, 0, 0, 0.21);
   border-color: #f0c014;
   background-color: #f0d264;
-  padding: 5px 10px;
+  padding: 10px 15px;
+  margin: 3px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 10%;
+  right: 15%;
+}
+
+
+
+.CloseButton {
+  color: white;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom-color: rgba(0, 0, 0, 0.34);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.34) inset,
+    0 2px 0 -1px rgba(0, 0, 0, 0.13),
+    0 3px 0 -1px rgba(0, 0, 0, 0.08),
+    0 3px 13px -1px rgba(0, 0, 0, 0.21);
+  border-color: #f0c014;
+  background-color: #FD6F22;
+  padding: 10px 15px;
   margin: 3px;
   cursor: pointer;
   border-radius: 10px;
@@ -249,6 +279,25 @@
   transform: translateX(-50%);
 }
 
+.ListDetail {
+  color: white;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom-color: rgba(0, 0, 0, 0.34);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.34) inset,
+    0 2px 0 -1px rgba(0, 0, 0, 0.13),
+    0 3px 0 -1px rgba(0, 0, 0, 0.08),
+    0 3px 13px -1px rgba(0, 0, 0, 0.21);
+  border-color: #f0c014;
+  background-color: #f0d264;
+  padding: 5px 10px;
+  margin: 3px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
 .ListCateBtPo {
   position: absolute;
   top: 9%;
@@ -268,6 +317,7 @@
   letter-spacing: 1px;
   font-weight: 400;
   text-align: center;
+  text-overflow: ellipsis;
 }
 
 .Listtabel {
@@ -353,7 +403,7 @@
 
 .Inputdiv {
   position: absolute;
-  top: 35%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -469,7 +519,7 @@
 
 .LoginBt {
   position: absolute;
-  bottom: 38%;
+  bottom: 35%;
   width: 335px;
   height: 100px;
   left: 50%;
@@ -503,12 +553,13 @@
   .LoginBt {
     width: 40%;
     height: 10.5%;
+    bottom: 42%;
   }
 }
 
 .LoginCreate {
   position: absolute;
-  bottom: 20%;
+  bottom: 12%;
   width: 265px;
   height: 80px;
   left: 50%;
@@ -524,7 +575,7 @@
   width: 700px;
   height: 450px;
   position: absolute;
-  bottom: 57%;
+  bottom: 52%;
   left: 50%;
   transform: translate(-50%, 50%);
 }
@@ -532,6 +583,7 @@
 /* 반응형 스타일 */
 @media (max-width: 767px) {
   .LoginsubBack {
+    bottom: 55%;
     width: 90%;
     height: 30%;
     max-width: 400px;
@@ -547,6 +599,7 @@
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .LoginsubBack {
+    bottom: 55%;
     width: 100%;
     height: 50%;
   }
@@ -563,7 +616,7 @@
 
 .JoinAll {
   position: absolute;
-  top: 55%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -665,8 +718,8 @@
 
 .PopupContent {
   position: fixed;
-  width: 400px;
-  height: 500px;
+  width: 500px;
+  height: 600px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -675,7 +728,7 @@
   background-color: white;
   z-index: 100000;
   overflow: hidden;
-  padding: 20px;
+  padding: 50px;
 }
 
 .ClosePopupButton {
@@ -714,4 +767,42 @@
   background-repeat: no-repeat;
   height: 100vh;
   position: relative;
+}
+
+.Searchall {
+  position: absolute;
+  top: 12%;
+  left: 2%;
+}
+
+.Searchsub {
+  margin: 3%;
+}
+
+.foundtxt {
+  font-family: 'SunBatang-Light';
+  color: #ff9d01;
+  font-size: 60px;
+}
+
+.BackButton {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  color: white;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom-color: rgba(0, 0, 0, 0.34);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.34) inset,
+    0 2px 0 -1px rgba(0, 0, 0, 0.13),
+    0 3px 0 -1px rgba(0, 0, 0, 0.08),
+    0 3px 13px -1px rgba(0, 0, 0, 0.21);
+  border-color: #f0c014;
+  background-color: #FD6F22;
+  padding: 10px 15px;
+  margin: 3px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
 }

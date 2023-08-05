@@ -1,6 +1,7 @@
 import style from './Food.module.css';
 import { useEffect, useState } from 'react';
 import FoodMap from './FoodMap';
+import FoodFound from './FoodFound';
 
 const FoodList = () => {
   const [foodList, setFoodList] = useState([]);
@@ -8,10 +9,11 @@ const FoodList = () => {
   const [selectedFoodId, setSelectedFoodId] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [filteredFoodList, setFilteredFoodList] = useState([]);
+  const [selectedFood, setSelectedFood] = useState(null);
 
   // 데이터 불러오기
   useEffect(() => {
-    fetch('http://192.168.0.103:8080/getFoods')
+    fetch('http://192.168.2.122:8080/getFoods')
       .then((response) => response.json())
       .then((data) => {
         setFoodList(data);
@@ -64,6 +66,8 @@ const FoodList = () => {
   };
 
   const handleFoodNameClick = (foodId) => {
+    const selectedFoodData = filteredFoodList.find((item) => item.id === foodId);
+    setSelectedFood(selectedFoodData); // 선택한 음식점 정보 업데이트
     setSelectedFoodId(foodId);
   };
 
@@ -84,115 +88,121 @@ const FoodList = () => {
           <th className={style.Listhead}>번호</th>
           <th className={style.Listhead}>이름</th>
           <th className={style.Listhead}>주소</th>
-        <th className={style.Listhead}>전화번호</th>
-        {filteredData.slice(startIndex, endIndex).map((item) => (
-          <tr key={item.id}>
-            <td className={style.Listcell}>{item.id}</td>
-            <td className={style.Listcell} onClick={() => handleFoodNameClick(item.id)} style={{ cursor: 'pointer' }}>
-              {item.name}
-            </td>
-            <td className={style.Listcell}>{item.addr_do}</td>
-            <td className={style.Listcell}>{item.contact}</td>
-          </tr>
-        ))}
-      </table>
-      </div >
+          <th className={style.Listhead}>전화번호</th>
+          {filteredData.slice(startIndex, endIndex).map((item) => (
+            <tr key={item.id}>
+              <td className={style.Listcell}>{item.id}</td>
+              <td className={style.Listcell}>
+                {/* 이름을 누르면 선택한 음식점의 id를 업데이트 */}
+                <span onClick={() => setSelectedFoodId(item.id)} style={{ cursor: 'pointer' }}>
+                  {item.name}
+                </span>
+              </td>
+              <td className={style.Listcell}>{item.addr_do}</td>
+              <td className={style.Listcell}>{item.contact}</td>
+            </tr>
+          ))}
+        </table>
+        {/* 상세보기 버튼을 테이블 밖 하단 우측에 배치 */}
+        {selectedFoodId && (
+          <button className={style.ListDetail} onClick={() => setSelectedFood(filteredData.find(item => item.id === selectedFoodId))}>
+            상세보기
+          </button>
+        )}
+      </div>
     );
   };
 
+  const handleCategoryClick = (categoryName) => {
+    if (categoryName === null) {
+      setFilteredFoodList(foodList);
+    } else {
+      const filteredData = foodList.filter((item) => item.category === categoryName);
+      setFilteredFoodList(filteredData);
+    }
 
-const handleCategoryClick = (categoryName) => {
-  if (categoryName === null) {
-    setFilteredFoodList(foodList);
-  } else {
-    const filteredData = foodList.filter((item) => item.category === categoryName);
-    setFilteredFoodList(filteredData);
-  }
+    setCurrentPage(1);
+    setSelectedCategory(categoryName);
+  };
 
-  setCurrentPage(1);
-  setSelectedCategory(categoryName);
-};
+  const renderPaginationButtons = () => {
+    const totalPages = Math.ceil(filteredFoodList.length / itemsPerPage);
+    const buttons = [];
+    const startPage = Math.max(currentPage - Math.floor(pagesToShow / 2), 1);
+    const endPage = Math.min(startPage + pagesToShow - 1, totalPages);
 
-const renderPaginationButtons = () => {
-  const totalPages = Math.ceil(filteredFoodList.length / itemsPerPage);
-  const buttons = [];
-  const startPage = Math.max(currentPage - Math.floor(pagesToShow / 2), 1);
-  const endPage = Math.min(startPage + pagesToShow - 1, totalPages);
-
-  buttons.push(
-    <button key={'first'} onClick={() => setCurrentPage(1)} className={style.ListCateBt}>
-      처음페이지로
-    </button>
-  );
-
-  buttons.push(
-    <button
-      key={'prev'}
-      onClick={() => setCurrentPage((prevPage) => Math.max(prevPage - 1, 1))}
-      className={style.ListCateBt}
-    >
-      이전
-    </button>
-  );
-
-  for (let i = startPage; i <= endPage; i++) {
     buttons.push(
-      <button
-        key={i}
-        onClick={() => setCurrentPage(i)}
-        className={currentPage === i ? style['active-ListCateBt'] : style['ListCateBt']}
-      >
-        {i}
+      <button key={'first'} onClick={() => setCurrentPage(1)} className={style.ListCateBt}>
+        처음페이지로
       </button>
     );
-  }
 
-  buttons.push(
-    <button
-      key={'next'}
-      onClick={() => setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages))}
-      className={style.ListCateBt}
-    >
-      다음
-    </button>
-  );
-
-  return buttons;
-};
-
-const categoryNames = foodList.map((item) => item.category);
-const uniqueCategoryNames = Array.from(new Set(categoryNames));
-
-return (
-  <div className={style.ListImg}>
-    <div className={style.ListCateBtPo}>
+    buttons.push(
       <button
-        key={'all'}
-        onClick={() => handleCategoryClick(null)}
-        className={selectedCategory === null ? style['active-ListCateBt'] : style['ListCateBt']}
+        key={'prev'}
+        onClick={() => setCurrentPage((prevPage) => Math.max(prevPage - 1, 1))}
+        className={style.ListCateBt}
       >
-        전체
+        이전
       </button>
-      {uniqueCategoryNames.map((name) => (
+    );
+
+    for (let i = startPage; i <= endPage; i++) {
+      buttons.push(
         <button
-          key={name}
-          onClick={() => handleCategoryClick(name)}
-          className={selectedCategory === name ? style['active-ListCateBt'] : style['ListCateBt']}
+          key={i}
+          onClick={() => setCurrentPage(i)}
+          className={currentPage === i ? style['active-ListCateBt'] : style['ListCateBt']}
         >
-          {name}
+          {i}
         </button>
-      ))}
+      );
+    }
+
+    buttons.push(
+      <button
+        key={'next'}
+        onClick={() => setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages))}
+        className={style.ListCateBt}
+      >
+        다음
+      </button>
+    );
+
+    return buttons;
+  };
+
+  const categoryNames = foodList.map((item) => item.category);
+  const uniqueCategoryNames = Array.from(new Set(categoryNames));
+
+  return (
+    <div className={style.ListImg}>
+      <div className={style.ListCateBtPo}>
+        <button
+          key={'all'}
+          onClick={() => handleCategoryClick(null)}
+          className={selectedCategory === null ? style['active-ListCateBt'] : style['ListCateBt']}
+        >
+          전체
+        </button>
+        {uniqueCategoryNames.map((name) => (
+          <button
+            key={name}
+            onClick={() => handleCategoryClick(name)}
+            className={selectedCategory === name ? style['active-ListCateBt'] : style['ListCateBt']}
+          >
+            {name}
+          </button>
+        ))}
+      </div>
+      {renderTableRows()}
+      <div className={style.PageBt}>
+        {renderPaginationButtons()}
+      </div>
+      <FoodFound selectedFood={selectedFood} onBackButtonClick={() => setSelectedFood(null)} />
+      <FoodMap foodList={foodList} selectedFoodId={selectedFoodId} />
     </div>
-    {renderTableRows()}
-    <div className={style.PageBt}>
-      {renderPaginationButtons()}
-    </div>
-    <FoodMap foodList={foodList} selectedFoodId={selectedFoodId} />
-  </div>
-);
+  );
 };
 
 export default FoodList;
-
-
-

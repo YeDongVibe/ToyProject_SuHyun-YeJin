@@ -17,23 +17,8 @@ const FoodNav = () => {
           </Link>
         </li>
         <li>
-          <Link to={"/FoodSearch"} className={style.NavSub}>
-            Search
-          </Link>
-        </li>
-        <li>
-          <Link to={"/FoodFound"} className={style.NavSub}>
-            Found
-          </Link>
-        </li>
-        <li>
           <Link to={"/FoodLogin"} className={style.NavSub}>
             Login
-          </Link>
-        </li>
-        <li>
-          <Link to={"/FoodJoin"} className={style.NavSub}>
-            Join
           </Link>
         </li>
       </ul>

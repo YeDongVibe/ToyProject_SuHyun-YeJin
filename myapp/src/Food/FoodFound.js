@@ -1,38 +1,49 @@
 import style from "./Food.module.css";
-// import { Link } from "react-router-dom"
-
-// import FoodFoundChk from "./FoodFoundChk";
-// import FoundBackImg from "../Img/FoodFound/FoundBackImg.png"; // 이미지 파일 경로 수정
-// import FoundFindBt from "../Img/FoodFound/FoundfindBt.png"
+import "./FoodIcon.css";
 
 
-const FoodFound = () => {
-
+const FoodFound = ({ selectedFood, onBackButtonClick }) => {
+    if (!selectedFood) {
+        return null;
+    }
     return (
         <main className={style.FoundImg}>
             <div className={style.Searchall}>
                 <div className={style.Searchsub}>
-                    <h1 className={style.SearchAddress}>식당명(Name)
-                    </h1>
+                    <span className="material-symbols-outlined">
+                        storefront <i className={style.foundtxt}>{selectedFood.name}</i>
+                    </span>
                 </div>
                 <div className={style.Searchsub}>
-                    <h1 className={style.SearchAddress}>전화번호(Number)
-                    </h1>
+                    <span className="material-symbols-outlined">
+                        call <i className={style.foundtxt}>{selectedFood.contact}</i>
+                    </span>
                 </div>
                 <div className={style.Searchsub}>
-                    <h1 className={style.SearchAddress}>주소(Address)
-                    </h1>
+                    <span className="material-symbols-outlined">
+                        location_on <i className={style.foundtxt}>{selectedFood.addr_do}</i>
+                    </span>
                 </div>
                 <div className={style.Searchsub}>
-                    <h1 className={style.SearchParking}>주차장(Parking lot)</h1>
+                    <span className="material-symbols-outlined">
+                        local_parking <i className={style.foundtxt}>{selectedFood.parking}</i>
+                    </span>                   
                 </div>
                 <div className={style.Searchsub}>
-                    <h1 className={style.SearchPet}>반려동물 동반(with pet)</h1>
+                    <span className="material-symbols-outlined">
+                        pets <i className={style.foundtxt}>{selectedFood.pet}</i>
+                    </span>                   
                 </div>
                 <div className={style.Searchsub}>
-                    <h1 className={style.SearchMenu}>다국어 메뉴(English Menu)</h1>
+                    <span className="material-symbols-outlined">
+                        menu_book <i className={style.foundtxt}>(English Menu) {selectedFood.englishmenu}</i>
+                    </span>
                 </div>
             </div>
+            <div>
+            {/* {selectedFood.foodimg} */}
+            </div>
+            <button className={style.BackButton} onClick={onBackButtonClick}>돌아가기</button>
         </main>
     )
 }

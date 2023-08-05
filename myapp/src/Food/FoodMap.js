@@ -114,8 +114,6 @@ const FoodMap = ({ foodList, selectedFoodId }) => {
       {state.isMapVisible && (
         <div className={style.PopupOverlay}>
           <div className={style.PopupContent}>
-            <button className={style.CloseButton} onClick={handleCloseMap}>닫기</button> {/* 닫기 버튼 */}
-            <button className={style.MapMyPosi} onClick={getCurrentLocation}>내 위치로</button>
             <Map
               center={state.center}
               style={{
@@ -136,8 +134,9 @@ const FoodMap = ({ foodList, selectedFoodId }) => {
                 </>
               )}
             </Map>
-
+            <button className={style.CloseButton} onClick={handleCloseMap}>닫기</button>
           </div>
+          <button className={style.MapMyPosi} onClick={getCurrentLocation}>내 위치로</button>
         </div>
       )}
     </main>
