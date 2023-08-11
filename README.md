@@ -69,6 +69,7 @@
   * Front-end : 페이지 구성 조정 및 제작
   * Back-end : 로그인 동작 구현, User 객체 null 값 오류 수정 중
 **23.08.07**
+<<<<<<< HEAD
   * Front-end : 
   * Back-end : 로그인 동작 구현, User 객체 null 값 오류 수정 중
 **23.08.08**
@@ -77,7 +78,17 @@
 **23.08.09**
   * Front-end : List 페이지 재구성
   * Back-end : 로그인 동작 구현, jwt토큰 전달 문제 수정 중
+=======
+  * Front-end : List 페이지 Found 페이지 연동
+  * Back-end : 
+**23.08.08**
+  * Front-end : Found 페이지 구성 및 배치
+  * Back-end : 
+**23.08.09**
+  * Front-end : List 페이지 재구성
+  * Back-end : 
+>>>>>>> 79ff2ec483abb5803d99fd0eafa45d6bfbf93139
 **23.08.10**
-  * Front-end : 
+  * Front-end : List 페이지 반응형 구축
   * Back-end : 로그인 동작 구현 성공 - 비밀번호 암호화 저장, jwt토큰 전송 성공, front단에서 로그인 후 전송 실패 수정
                회원가입 권한 문제 수정 - 권한 설정 오류로 인해서 발생한 cors문제 해결, 권한 설정이 꼬여 있어서 cors문제가 발생!! 
