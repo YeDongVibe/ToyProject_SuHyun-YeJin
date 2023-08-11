@@ -68,7 +68,15 @@
 **23.08.05**
   * Front-end : 페이지 구성 조정 및 제작
   * Back-end : 로그인 동작 구현, User 객체 null 값 오류 수정 중
-
+**23.08.07**
+  * Front-end : 
+  * Back-end : 로그인 동작 구현, User 객체 null 값 오류 수정 중
+**23.08.08**
+  * Front-end : 
+  * Back-end : 로그인 동작 구현, User 객체 null 값 오류 수정 완료 및 jwt토큰 전달 문제 수정 중
+**23.08.09**
+  * Front-end : List 페이지 재구성
+  * Back-end : 로그인 동작 구현, jwt토큰 전달 문제 수정 중
 **23.08.10**
   * Front-end : 
   * Back-end : 로그인 동작 구현 성공 - 비밀번호 암호화 저장, jwt토큰 전송 성공, front단에서 로그인 후 전송 실패 수정
