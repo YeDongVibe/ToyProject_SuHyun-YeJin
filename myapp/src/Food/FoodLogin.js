@@ -6,8 +6,6 @@ import { useState } from "react";
 import axios from "axios";
 
 
-
-
 const FoodLogin = () => {
   const handleCreateClick = () => {
     alert("회원가입은 웹페이지에서만 가능합니다.");
@@ -50,12 +48,14 @@ const FoodLogin = () => {
           <input type="password" id="pw" name="pw" placeholder="Password" onChange={(e) => setUserPassword(e.target.value)} required />
         </div>
       </div>
-      <button className={style.LoginBt} onClick={handleLoginButtonClick} />
-      {/* 'LoginCreate' 버튼을 누를 때 경고창을 띄우고, FoodJoin.js로 연결 */}
+      <div className={style.LogBtset}>
+        <button className={style.LoginBt} onClick={handleLoginButtonClick} />
+        <button className={style.LogoutBt} />
+        {/* 'LoginCreate' 버튼을 누를 때 경고창을 띄우고, FoodJoin.js로 연결 */}
+      </div>
       <Link to="/foodjoin">
         <button className={style.LoginCreate} onClick={handleCreateClick} />
       </Link>
-
     </main>
   );
 };

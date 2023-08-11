@@ -15,7 +15,6 @@ const Food = () => {
                 <Routes>
                     <Route path="/" element = {<FoodMain />}/>
                     <Route path="/FoodList" element = {<FoodList />} />
-                    <Route path="/FoodFound" element = {<FoodFound />} />
                     <Route path="/FoodLogin" element = {<FoodLogin />} />
                     <Route path="/FoodJoin" element = {<FoodJoin />} />
                 </Routes>

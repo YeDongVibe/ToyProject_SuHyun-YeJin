@@ -377,6 +377,7 @@
     font-size: 13px;
     overflow-y: auto;
   }
+
   .semiBt {
     position: fixed;
     left: 50%;
@@ -384,12 +385,14 @@
     margin-top: 7%;
   }
 }
+
 /* 테블릿 세로 */
 @media (min-width: 768px) and (max-width: 991px) {
   .Listdiv {
     top: 60%;
   }
 }
+
 /* 테블릿 가로 */
 @media (min-width: 1190px) and (max-width: 1367px) {
   .Listdiv {
@@ -528,14 +531,27 @@
   }
 }
 
-.LoginBt {
+.LogBtset {
   position: absolute;
-  bottom: 35%;
-  width: 335px;
-  height: 100px;
+  bottom: 35vh;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.LoginBt {
+  width: 335px;
+  height: 100px;
   background-image: url("../Img/FoodLogin/LoginBt.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-style: none;
+  background-color: transparent;
+}
+
+.LogoutBt {
+  width: 335px;
+  height: 100px;
+  background-image: url("../Img/FoodLogin/Logout.png");
   background-size: cover;
   background-repeat: no-repeat;
   border-style: none;
