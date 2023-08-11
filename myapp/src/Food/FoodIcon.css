@@ -1,5 +1,8 @@
 .material-symbols-outlined {
-    font-size: 70px;
-    color: #fd9322;
-    font-weight: bold;
-  }
+  font-size: 90px;
+  color: #FD6F22;
+  font-weight: bold;
+  align-items: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+}

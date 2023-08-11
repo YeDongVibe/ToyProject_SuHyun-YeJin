@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import FoodMain from "./FoodMain";
 import FoodList from "./FoodList";
-import FoodFound from "./FoodFound";
 import FoodLogin from "./FoodLogin";
 import FoodNav from "./FoodNav";
 import FoodJoin from "./FoodJoin";

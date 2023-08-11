@@ -4,20 +4,20 @@ import style from "./Food.module.css";
 
 const FoodNav = () => {
   return (
-    <div className={style.NavAll}>
-      <ul className={style.NavSubtop}>
+    <div className={style.navBar}>
+      <ul className={style.navBar_menus}>
         <li>
-          <Link to={"/"} className={style.NavSub}>
+          <Link to={"/"} className={style.navBar_menus_menu}>
             Main
           </Link>
         </li>
         <li>
-          <Link to={"/FoodList"} className={style.NavSub}>
+          <Link to={"/FoodList"} className={style.navBar_menus_menu}>
             List
           </Link>
         </li>
         <li>
-          <Link to={"/FoodLogin"} className={style.NavSub}>
+          <Link to={"/FoodLogin"} className={style.navBar_menus_menu}>
             Login
           </Link>
         </li>

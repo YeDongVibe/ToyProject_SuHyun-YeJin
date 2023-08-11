@@ -31,7 +31,7 @@ const FoodJoin = () => {
             userAddress: `${address.roadAddress} ${address.extraAddress}`,
             userAddressDetail
         };
-        axios.post('http://localhost:4000/signUp', data)
+        axios.post('http://localhost:4000/api/auth/signUp', data)
             .then((res) => {
             })
             .catch((err) => {

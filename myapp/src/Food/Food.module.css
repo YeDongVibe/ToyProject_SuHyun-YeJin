@@ -35,8 +35,8 @@
 }
 
 @font-face {
-  font-family: 'SunBatang-Light';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Light.woff') format('woff');
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -146,7 +146,7 @@
 }
 
 /* FoodNav */
-.NavAll {
+.navBar {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -155,54 +155,42 @@
   left: 7px;
   width: 100%;
   z-index: 9999;
+
 }
 
-/* 반응형 스타일 */
-@media screen and (max-width: 767px) {
-  .NavAll {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.NavSubtop {
-  list-style: none;
+.navBar_menus {
   display: flex;
+  list-style: none;
   justify-content: flex-end;
   padding: 0;
   font-family: 'LeferiPoint-BlackA';
+
 }
 
-/* 반응형 스타일 */
-@media screen and (max-width: 767px) {
-  .NavSubtop {
+.navBar_menus_menu {
+  color: coral;
+  text-decoration: none;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .navBar {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .navBar_menus {
     align-items: center;
     position: absolute;
     top: 10%;
     font-size: 15px;
-  }
-}
-
-.NavSub {
-  text-decoration: none;
-  color: coral;
-  padding-right: 10px;
-}
-
-/* 반응형 스타일 */
-@media screen and (max-width: 767px) {
-  .NavSub {
-    display: flex;
-    justify-content: flex-end;
+    background-color: #fff;
   }
 }
 
 /* FoodMap */
 .MapMyPosi {
-  position: absolute;
-  bottom: 18%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
   display: inline-block;
   border: 1px solid rgba(0, 0, 0, 0.21);
@@ -212,9 +200,10 @@
     0 2px 0 -1px rgba(0, 0, 0, 0.13),
     0 3px 0 -1px rgba(0, 0, 0, 0.08),
     0 3px 13px -1px rgba(0, 0, 0, 0.21);
-  border-color: #f0c014;
-  background-color: #f0d264;
-  padding: 5px 10px;
+  border-color: #FD6F22;
+  background-color: #FD6F22;
+  padding: 10px 15px;
+  margin: 3px;
   cursor: pointer;
   border-radius: 10px;
   font-weight: bold;
@@ -230,18 +219,14 @@
     0 2px 0 -1px rgba(0, 0, 0, 0.13),
     0 3px 0 -1px rgba(0, 0, 0, 0.08),
     0 3px 13px -1px rgba(0, 0, 0, 0.21);
-  border-color: #f0c014;
-  background-color: #f0d264;
-  padding: 10px 15px;
+  border-color: #FFCD4A;
+  background-color: #FFCD4A;
+  padding: 5px 10px;
   margin: 3px;
   cursor: pointer;
   border-radius: 10px;
   font-weight: bold;
-  position: absolute;
-  bottom: 10%;
-  right: 15%;
 }
-
 
 
 .CloseButton {
@@ -254,7 +239,7 @@
     0 2px 0 -1px rgba(0, 0, 0, 0.13),
     0 3px 0 -1px rgba(0, 0, 0, 0.08),
     0 3px 13px -1px rgba(0, 0, 0, 0.21);
-  border-color: #f0c014;
+  border-color: #FD6F22;
   background-color: #FD6F22;
   padding: 10px 15px;
   margin: 3px;
@@ -272,13 +257,6 @@
   position: relative;
 }
 
-.PageBt {
-  position: absolute;
-  bottom: 1%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .ListDetail {
   color: white;
   display: inline-block;
@@ -289,8 +267,8 @@
     0 2px 0 -1px rgba(0, 0, 0, 0.13),
     0 3px 0 -1px rgba(0, 0, 0, 0.08),
     0 3px 13px -1px rgba(0, 0, 0, 0.21);
-  border-color: #f0c014;
-  background-color: #f0d264;
+  border-color: #FFCD4A;
+  background-color: #FFCD4A;
   padding: 5px 10px;
   margin: 3px;
   cursor: pointer;
@@ -299,19 +277,17 @@
 }
 
 .ListCateBtPo {
-  position: absolute;
-  top: 9%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-bottom: 1%;
 }
 
 .Listdiv {
+  table-layout: fixed;
   position: absolute;
-  top: 53%;
+  top: 50vh;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  line-height: auto;
+  /* line-height: auto; */
   font-family: 'HallymGothic-Regular';
   font-size: 17px;
   letter-spacing: 1px;
@@ -320,36 +296,35 @@
   text-overflow: ellipsis;
 }
 
+.semiBt {
+  display: inline-flex;
+  position: absolute;
+  right: 0%;
+  margin-top: 1%;
+}
+
+
 .Listtabel {
   width: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   table-layout: fixed;
 }
 
-@media screen and (max-width: 580px) {
-  Listdiv {
-    font-size: 16px;
-    line-height: 22px;
-  }
-}
-
-@media screen and (max-width: 580px) {
-  .Listtabel {
-    display: block;
-  }
-}
-
 .Listhead {
   color: #fff;
-  background: #f0d264;
+  background: #FFCD4A;
   text-align: center;
 }
 
 .Listcell {
-  border-bottom: 1px solid #c99d00;
+  border-bottom: 1px solid #FFCD4A;
   padding: 10px;
 }
 
+.SelectedFood {
+  color: #FD6F22;
+  font-weight: bold;
+}
 
 .ListCateBt {
   color: white;
@@ -361,8 +336,8 @@
     0 2px 0 -1px rgba(0, 0, 0, 0.13),
     0 3px 0 -1px rgba(0, 0, 0, 0.08),
     0 3px 13px -1px rgba(0, 0, 0, 0.21);
-  border-color: #f0c014;
-  background-color: #f0d264;
+  border-color: #FFCD4A;
+  background-color: #FFCD4A;
   padding: 5px 10px;
   margin: 3px;
   cursor: pointer;
@@ -386,7 +361,42 @@
   cursor: pointer;
   border-radius: 10px;
   font-weight: bold;
+  text-align: center;
+  text-overflow: ellipsis;
+
 }
+
+.PaginationContainer {
+  margin-top: 1%;
+}
+
+/* 모바일 */
+@media screen and (max-width: 767px) {
+  .Listdiv {
+    top: 107%;
+    font-size: 13px;
+    overflow-y: auto;
+  }
+  .semiBt {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 7%;
+  }
+}
+/* 테블릿 세로 */
+@media (min-width: 768px) and (max-width: 991px) {
+  .Listdiv {
+    top: 60%;
+  }
+}
+/* 테블릿 가로 */
+@media (min-width: 1190px) and (max-width: 1367px) {
+  .Listdiv {
+    top: 56%;
+  }
+}
+
 
 /* FoodLogin */
 .LoginBackImg {
@@ -435,6 +445,7 @@
     height: auto;
     top: 35%;
   }
+
 }
 
 .LoginsubId,
@@ -771,24 +782,26 @@
 
 .Searchall {
   position: absolute;
-  top: 12%;
-  left: 2%;
-}
-
-.Searchsub {
-  margin: 3%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
 }
 
 .foundtxt {
-  font-family: 'SunBatang-Light';
-  color: #ff9d01;
-  font-size: 60px;
+  font-family: 'NanumSquareNeo-Variable';
+  color: #FD6F22;
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  word-spacing: 3px;
+}
+
+.Searchsub {
+  margin-bottom: 2%;
 }
 
 .BackButton {
-  position: absolute;
-  bottom: 10%;
-  right: 10%;
   color: white;
   display: inline-block;
   border: 1px solid rgba(0, 0, 0, 0.21);
@@ -800,9 +813,17 @@
     0 3px 13px -1px rgba(0, 0, 0, 0.21);
   border-color: #f0c014;
   background-color: #FD6F22;
-  padding: 10px 15px;
+  padding: 5px 10px;
   margin: 3px;
   cursor: pointer;
   border-radius: 10px;
   font-weight: bold;
+}
+
+.FoundBtset {
+  display: inline-flex;
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  margin-top: 1%;
 }

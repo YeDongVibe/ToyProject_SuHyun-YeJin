@@ -1,4 +1,6 @@
 import style from "./Food.module.css";
+import { useState } from 'react';
+
 import "./FoodIcon.css";
 
 
@@ -6,44 +8,46 @@ const FoodFound = ({ selectedFood, onBackButtonClick }) => {
     if (!selectedFood) {
         return null;
     }
+
     return (
         <main className={style.FoundImg}>
             <div className={style.Searchall}>
                 <div className={style.Searchsub}>
                     <span className="material-symbols-outlined">
-                        storefront <i className={style.foundtxt}>{selectedFood.name}</i>
-                    </span>
+                        storefront</span>
+                    <span className={style.foundtxt}>  {selectedFood.name}</span>
                 </div>
                 <div className={style.Searchsub}>
                     <span className="material-symbols-outlined">
-                        call <i className={style.foundtxt}>{selectedFood.contact}</i>
-                    </span>
+                        call</span>
+                    <span className={style.foundtxt}>  {selectedFood.contact}</span>
                 </div>
                 <div className={style.Searchsub}>
                     <span className="material-symbols-outlined">
-                        location_on <i className={style.foundtxt}>{selectedFood.addr_do}</i>
-                    </span>
+                        location_on</span>
+                    <span className={style.foundtxt}>  {selectedFood.addr_do}</span>
                 </div>
                 <div className={style.Searchsub}>
                     <span className="material-symbols-outlined">
-                        local_parking <i className={style.foundtxt}>{selectedFood.parking}</i>
-                    </span>                   
+                        local_parking</span>
+                    <span className={style.foundtxt}>  {selectedFood.parking}</span>
                 </div>
                 <div className={style.Searchsub}>
                     <span className="material-symbols-outlined">
-                        pets <i className={style.foundtxt}>{selectedFood.pet}</i>
-                    </span>                   
+                        pets</span>
+                    <span className={style.foundtxt}>  {selectedFood.pet}</span>
                 </div>
                 <div className={style.Searchsub}>
                     <span className="material-symbols-outlined">
-                        menu_book <i className={style.foundtxt}>(English Menu) {selectedFood.englishmenu}</i>
-                    </span>
+                        menu_book</span>
+                    <span className={style.foundtxt}>  (English Menu) {selectedFood.englishmenu}</span>
                 </div>
             </div>
             <div>
-            {/* {selectedFood.foodimg} */}
             </div>
-            <button className={style.BackButton} onClick={onBackButtonClick}>돌아가기</button>
+            <div className={style.FoundBtset}>
+                <button className={style.BackButton} onClick={onBackButtonClick}>돌아가기</button>
+            </div>
         </main>
     )
 }

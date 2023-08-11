@@ -47,12 +47,12 @@ const FoodMap = ({ foodList, selectedFoodId }) => {
   // 선택한 음식점의 위치 정보만 따로 추출하여 markers 상태로 저장
   const selectedFood = foodList.find((food) => food.id === selectedFoodId);
   const markers = selectedFood ? [
-    {
-      id: selectedFood.id,
-      name: selectedFood.name,
-      latitude: selectedFood.latitude,
-      longitude: selectedFood.longitude,
-    },
+      {
+          id: selectedFood.id,
+          name: selectedFood.name,
+          latitude: selectedFood.latitude,
+          longitude: selectedFood.longitude,
+      },
   ] : [];
 
   useEffect(() => {
@@ -106,11 +106,6 @@ const FoodMap = ({ foodList, selectedFoodId }) => {
 
   return (
     <main>
-      {selectedFood && (
-        <div>
-          <button onClick={handleMapToggle} className={style.MapSeeBt}>지도보기</button>
-        </div>
-      )}
       {state.isMapVisible && (
         <div className={style.PopupOverlay}>
           <div className={style.PopupContent}>
@@ -135,8 +130,13 @@ const FoodMap = ({ foodList, selectedFoodId }) => {
               )}
             </Map>
             <button className={style.CloseButton} onClick={handleCloseMap}>닫기</button>
+            <button className={style.MapMyPosi} onClick={getCurrentLocation}>내 위치로</button>
           </div>
-          <button className={style.MapMyPosi} onClick={getCurrentLocation}>내 위치로</button>
+        </div>
+      )}
+      {selectedFood && (
+        <div>
+          <button onClick={handleMapToggle} className={style.MapSeeBt}>지도보기</button>
         </div>
       )}
     </main>
