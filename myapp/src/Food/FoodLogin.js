@@ -2,7 +2,7 @@ import style from "./Food.module.css";
 import Login from "../Img/FoodLogin/Login.png";
 import LoginsubBack from "../Img/FoodLogin/LoginsubBack.png"
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 
@@ -17,22 +17,43 @@ const FoodLogin = () => {
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
 
+  // 로그인 상태 여부 상태 관리
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if(token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
   const handleLoginButtonClick = () => {
     const data = {
       userEmail,
       userPassword
     };
-    axios.post('http://localhost:4000/members/signIn', data)
+    axios.post('http://localhost:4000/signIn', data)
       .then((res) => {
-        alert('로그인 성공')
-        navigate("/FoodList")
+        localStorage.setItem('token', res.data.token);
+        setIsLoggedIn(true);
+        alert('로그인 성공');
+        navigate("/FoodList");
       })
       .catch((err) => {
+        alert('잘못된 아이디 혹은 패스워드 입니다')
       });
     // fetch('http://localhost:4000/members/signIn', {method: 'POST'})
     //   .then(res => console.log(res))
     //   .catch(err => console.error(err))
-  }
+  };
+
+  const handleLogoutButtonClick = () => {
+    // 로컬 스토리지에서 토큰 삭제
+    localStorage.removeItem('token');
+    setIsLoggedIn(false); // 로그아웃 상태로 변경
+    alert('로그아웃 성공');
+    navigate("/");
+  };
 
   return (
     <main className={style.LoginBackImg}>
@@ -49,8 +70,10 @@ const FoodLogin = () => {
         </div>
       </div>
       <div className={style.LogBtset}>
-        <button className={style.LoginBt} onClick={handleLoginButtonClick} />
-        <button className={style.LogoutBt} />
+        {isLoggedIn ? (<button className={style.LogoutBt} onClick={handleLogoutButtonClick}/>)
+        : (<button className={style.LoginBt} onClick={handleLoginButtonClick} />)}        
+        {/* <button className={style.LogoutBt} onClick={handleLogoutButtonClick}/>
+        <button className={style.LoginBt} onClick={handleLoginButtonClick} /> */}
         {/* 'LoginCreate' 버튼을 누를 때 경고창을 띄우고, FoodJoin.js로 연결 */}
       </div>
       <Link to="/foodjoin">
