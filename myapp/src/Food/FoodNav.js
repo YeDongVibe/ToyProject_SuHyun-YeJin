@@ -1,8 +1,8 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import style from "./Food.module.css";
 
-const FoodNav = ({isLoggedIn}) => {
-
+const FoodNav = () => {
   return (
     <div className={style.navBar}>
       <ul className={style.navBar_menus}>
@@ -17,16 +17,9 @@ const FoodNav = ({isLoggedIn}) => {
           </Link>
         </li>
         <li>
-          {isLoggedIn ? (
-            <Link to={"/"} className={style.navBar_menus_menu}>
-              Logout
-            </Link>
-          )
-          : (
-            <Link to={"/FoodLogin"} className={style.navBar_menus_menu}>
+          <Link to={"/FoodLogin"} className={style.navBar_menus_menu}>
             Login
           </Link>
-          )}          
         </li>
       </ul>
     </div>

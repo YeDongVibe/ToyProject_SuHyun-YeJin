@@ -107,8 +107,8 @@ const FoodMap = ({ foodList, selectedFoodId }) => {
   return (
     <main>
       {state.isMapVisible && (
-        <div className={style.PopupOverlay}>
-          <div className={style.PopupContent}>
+        <div className={style.Mappopup}>
+          <div className={style.MappopupContent}>
             <Map
               center={state.center}
               style={{

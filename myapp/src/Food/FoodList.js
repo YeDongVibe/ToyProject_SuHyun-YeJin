@@ -2,7 +2,6 @@ import style from './Food.module.css';
 import { useEffect, useState } from 'react';
 import FoodMap from './FoodMap';
 import FoodFound from './FoodFound';
-import { Link } from 'react-router-dom';
 
 const FoodList = () => {
   const [foodList, setFoodList] = useState([]);
@@ -77,12 +76,12 @@ const FoodList = () => {
               <tr key={item.id}>
                 <td className={style.Listcell}>{item.id}</td>
                 <td className={`${style.Listcell} ${selectedFoodId === item.id ? style.SelectedFood : ''}`}>
-                    <span onClick={() => setSelectedFoodId(item.id)} style={{ cursor: 'pointer' }}>
-                      {item.name}
-                    </span>
-                  </td>
-                  <td className={style.Listcell}>{item.addr_do}</td>
-                  <td className={style.Listcell}>{item.contact}</td>
+                  <span onClick={() => setSelectedFoodId(item.id)} style={{ cursor: 'pointer' }}>
+                    {item.name}
+                  </span>
+                </td>
+                <td className={style.Listcell}>{item.addr_do}</td>
+                <td className={style.Listcell}>{item.contact}</td>
               </tr>
             ))}
           </tbody>
@@ -165,6 +164,7 @@ const FoodList = () => {
     <div className={style.ListImg}>
       <div className={style.RownPageBt}>
         {renderTableRows()}
+
       </div>
       <FoodFound selectedFood={selectedFood} onBackButtonClick={() => setSelectedFood(null)} />
     </div>

@@ -1,6 +1,4 @@
 import style from "./Food.module.css";
-import { useState } from 'react';
-
 import "./FoodIcon.css";
 
 
@@ -42,11 +40,9 @@ const FoodFound = ({ selectedFood, onBackButtonClick }) => {
                         menu_book</span>
                     <span className={style.foundtxt}>  (English Menu) {selectedFood.englishmenu}</span>
                 </div>
-            </div>
-            <div>
-            </div>
-            <div className={style.FoundBtset}>
-                <button className={style.BackButton} onClick={onBackButtonClick}>돌아가기</button>
+                <div className={style.FoundBtset}>
+                    <button className={style.BackButton} onClick={onBackButtonClick}>돌아가기</button>
+                </div>
             </div>
         </main>
     )

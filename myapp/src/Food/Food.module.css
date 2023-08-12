@@ -150,7 +150,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 7px;
   width: 100%;
@@ -185,7 +185,7 @@
     position: absolute;
     top: 10%;
     font-size: 15px;
-    background-color: #fff;
+
   }
 }
 
@@ -246,6 +246,57 @@
   cursor: pointer;
   border-radius: 10px;
   font-weight: bold;
+}
+
+.Mappopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MappopupContent {
+  position: fixed;
+  width: 500px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  z-index: 100000;
+  overflow: hidden;
+  padding: 50px;
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+.MappopupContent {
+  width: 328px;
+  padding: 10px;
+  padding-bottom: 50px;
+}
+  
+}
+
+/* 테블릿 세로 */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* 테블릿 가로 */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
+
 }
 
 /* FoodList */
@@ -385,6 +436,7 @@
     margin-top: 7%;
   }
 }
+
 
 /* 테블릿 세로 */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -668,7 +720,7 @@
 }
 
 .JoinPhoneN {
-  background-image: url("../Img/FoodJoin/JoinPW.png");
+  background-image: url("../Img/FoodJoin/JoinPhoneN.png");
 }
 
 .JoinAddr {
@@ -789,19 +841,30 @@
 
 /* FoodFound */
 .FoundImg {
-  background-image: url("../Img/FoodFound/FoundBackImg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Searchall {
-  position: absolute;
+  position: fixed;
+  width: 95vw;
+  height: 85vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90vw;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  z-index: 100000;
+  overflow: hidden;
+  padding: 20px;
 }
 
 .foundtxt {
@@ -829,8 +892,8 @@
     0 3px 13px -1px rgba(0, 0, 0, 0.21);
   border-color: #f0c014;
   background-color: #FD6F22;
-  padding: 5px 10px;
-  margin: 3px;
+  padding: 10px 15px;
+  /* margin: 2px; */
   cursor: pointer;
   border-radius: 10px;
   font-weight: bold;
@@ -842,4 +905,60 @@
   right: 5%;
   bottom: 10%;
   margin-top: 1%;
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+  .foundtxt {
+    font-size: 20px;
+  }
+  .Searchall {
+    width: 80%;
+    height: 60%;
+  }
+  .Searchsub {
+    margin-top: 7%;
+
+  }
+}
+
+/* 테블릿 세로 */
+@media (min-width: 768px) and (max-width: 991px) {
+  .foundtxt {
+    font-size: 30px;
+  }
+  .Searchall {
+    width: 90%;
+    height: 60%;
+  }
+  .Searchsub {
+    margin-top: 7%;
+  }
+}
+
+/* 테블릿 가로 */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .foundtxt {
+    font-size: 38px;
+  }
+  .Searchall {
+    width: 90%;
+    height: 80%;
+  }
+  .Searchsub {
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
+  .foundtxt {
+    font-size: 38px;
+  }
+  .Searchall {
+    width: 90%;
+    height: 80%;
+  }
+  .Searchsub {
+    margin-top: 5%;
+  }
 }
