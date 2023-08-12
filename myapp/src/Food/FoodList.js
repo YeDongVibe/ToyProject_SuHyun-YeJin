@@ -15,7 +15,7 @@ const FoodList = () => {
   let pagesToShow = 6;
 
   useEffect(() => {
-    fetch('http://localhost:8080/getFoods')
+    fetch('http://localhost:4000/getFoods')
       .then((response) => response.json())
       .then((data) => {
         setFoodList(data);

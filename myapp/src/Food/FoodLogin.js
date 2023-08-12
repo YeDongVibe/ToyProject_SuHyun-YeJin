@@ -42,9 +42,6 @@ const FoodLogin = () => {
       .catch((err) => {
         alert('잘못된 아이디 혹은 패스워드 입니다')
       });
-    // fetch('http://localhost:4000/members/signIn', {method: 'POST'})
-    //   .then(res => console.log(res))
-    //   .catch(err => console.error(err))
   };
 
   const handleLogoutButtonClick = () => {
@@ -72,9 +69,6 @@ const FoodLogin = () => {
       <div className={style.LogBtset}>
         {isLoggedIn ? (<button className={style.LogoutBt} onClick={handleLogoutButtonClick}/>)
         : (<button className={style.LoginBt} onClick={handleLoginButtonClick} />)}        
-        {/* <button className={style.LogoutBt} onClick={handleLogoutButtonClick}/>
-        <button className={style.LoginBt} onClick={handleLoginButtonClick} /> */}
-        {/* 'LoginCreate' 버튼을 누를 때 경고창을 띄우고, FoodJoin.js로 연결 */}
       </div>
       <Link to="/foodjoin">
         <button className={style.LoginCreate} onClick={handleCreateClick} />
