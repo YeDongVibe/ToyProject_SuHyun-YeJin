@@ -33,7 +33,11 @@ const FoodJoin = () => {
         };
         axios.post('http://localhost:4000/signUp', data)
             .then((res) => {
+<<<<<<< HEAD
                 alert("회원가입 성공!")
+=======
+                alert("회원가입 성공")
+>>>>>>> 6f4e50c9a454fab8034f6f55532e60816d9130a6
             })
             .catch((err) => {
             });
