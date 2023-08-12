@@ -612,19 +612,36 @@
 
 /* 반응형 스타일 */
 @media (max-width: 767px) {
+  .LogBtset {
+    position: absolute;
+    top: 55vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   .LoginBt {
-    width: 40%;
-    height: 5.5%;
-    max-width: 400px;
-    bottom: 45%;
+    width: 201px;
+    height: 60px;
+  }
+  .LogoutBt {
+    width: 201px;
+    height: 60px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .LogBtset {
+    position: absolute;
+    top: 58vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   .LoginBt {
-    width: 40%;
-    height: 8.5%;
-    bottom: 41%;
+    width: 335px;
+    height: 100px;
+  }
+  .LogoutBt {
+    width: 335px;
+    height: 100px;
   }
 }
 
@@ -633,6 +650,22 @@
     width: 40%;
     height: 10.5%;
     bottom: 42%;
+  }
+}
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
+  .LogBtset {
+    position: absolute;
+    top: 58vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .LoginBt {
+    width: 402px;
+    height: 120px;
+  }
+  .LogoutBt {
+    width: 402px;
+    height: 120px;
   }
 }
 

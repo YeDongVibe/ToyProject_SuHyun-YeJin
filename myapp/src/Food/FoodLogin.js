@@ -69,10 +69,6 @@ const FoodLogin = () => {
       <div className={style.LogBtset}>
         {isLoggedIn ? (<button className={style.LogoutBt} onClick={handleLogoutButtonClick}/>)
         : (<button className={style.LoginBt} onClick={handleLoginButtonClick} />)}        
-<<<<<<< HEAD
-
-=======
->>>>>>> 6f4e50c9a454fab8034f6f55532e60816d9130a6
       </div>
       <Link to="/foodjoin">
         <button className={style.LoginCreate} onClick={handleCreateClick} />
