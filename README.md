@@ -14,7 +14,7 @@
   * category : front에서 map을 돌려 category를 추가할때마다 업데이트?
 
 **기술 스택**
-  * Font : Javascript, React, Css
+  * Front : Javascript, React, Css
   * Back : SpringBoot, MySQL,
 
 **구조**
@@ -94,5 +94,8 @@
   * Back-end : 로그아웃 동작 구현 - 프론트에서 토큰을 지우는 방식으로 로그아웃 구현, 로그인 페이지 내에서만 동작하는 문제 有
 
 **23.08.12**
-  *Front-end : 전체 페이지 반응형 마무리.
-  *Back-end : 로그인/로그아웃 마무리.
+  * Front-end : 전체 페이지 반응형 마무리.
+  * Back-end : 로그인/로그아웃 마무리.
+
+**23.08.12**
+  * 전체 호스팅 중
