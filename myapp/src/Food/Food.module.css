@@ -150,7 +150,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 7px;
   width: 100%;
@@ -285,19 +285,6 @@
   
 }
 
-/* 테블릿 세로 */
-@media (min-width: 768px) and (max-width: 991px) {
-
-}
-
-/* 테블릿 가로 */
-@media (min-width: 992px) and (max-width: 1199px) {
-
-}
-
-@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
-
-}
 
 /* FoodList */
 .ListImg {
@@ -585,7 +572,7 @@
 
 .LogBtset {
   position: absolute;
-  bottom: 31vh;
+  bottom: 33vh;
   left: 50%;
   transform: translateX(-50%);
 }
