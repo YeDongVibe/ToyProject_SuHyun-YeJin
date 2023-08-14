@@ -295,6 +295,33 @@
   position: relative;
 }
 
+.ListFindBt {
+  display: inline-block;
+  margin-left: 3%;
+}
+.ListFindBt input {
+  font-size: 17px;
+}
+
+.LFbt {
+  color: white;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom-color: rgba(0, 0, 0, 0.34);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.34) inset,
+    0 2px 0 -1px rgba(0, 0, 0, 0.13),
+    0 3px 0 -1px rgba(0, 0, 0, 0.08),
+    0 3px 13px -1px rgba(0, 0, 0, 0.21);
+  border-color: #FFCD4A;
+  background-color: #FFCD4A;
+  padding: 5px 10px;
+  margin: 3px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
 .ListDetail {
   color: white;
   display: inline-block;
@@ -316,6 +343,7 @@
 
 .ListCateBtPo {
   margin-bottom: 1%;
+  display: inline-block;
 }
 
 .Listdiv {
@@ -410,7 +438,7 @@
 /* 모바일 */
 @media screen and (max-width: 767px) {
   .Listdiv {
-    top: 105%;
+    top: 108%;
     font-size: 13px;
     overflow-y: auto;
   }
@@ -427,7 +455,7 @@
 /* 테블릿 세로 */
 @media (min-width: 768px) and (max-width: 991px) {
   .Listdiv {
-    top: 60%;
+    top: 62%;
   }
 }
 

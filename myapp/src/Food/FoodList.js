@@ -1,5 +1,5 @@
 import style from './Food.module.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import FoodMap from './FoodMap';
 import FoodFound from './FoodFound';
 
@@ -12,6 +12,7 @@ const FoodList = () => {
   const [selectedFood, setSelectedFood] = useState(null);
   const itemsPerPage = 15;
   let pagesToShow = 6;
+  const txt1 = useRef();
 
   useEffect(() => {
     fetch('http://192.168.0.103:4000/getFoods')
@@ -37,6 +38,20 @@ const FoodList = () => {
       : filteredFoodList.filter((item) => item.category === selectedCategory);
   };
 
+  const finddt = (e) => {
+    const keyword = txt1.current.value.toLowerCase(); // 입력된 키워드를 소문자로 변환하여 저장
+    const filteredData = filterTableData().filter(item => item.name.toLowerCase().includes(keyword));
+
+    setFilteredFoodList(filteredData);
+    setCurrentPage(1);
+  }
+  const findcancle = (e) => {
+    txt1.current.value = ''; // 검색어를 지우기 위해 검색창의 value를 초기화
+    setFilteredFoodList(foodList); // 전체 데이터로 필터링된 데이터 초기화
+    setSelectedCategory(null); // 선택된 카테고리 초기화
+    setCurrentPage(1); // 페이지 초기화
+  }
+
   const renderTableRows = () => {
     const filteredData = filterTableData();
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -61,6 +76,11 @@ const FoodList = () => {
               {name}
             </button>
           ))}
+        </div>
+        <div className={style.ListFindBt}>
+          <input ref={txt1} type="text" id="txt1" name="txt1" placeholder="식당 이름을 입력하세요." required />
+          <button className={style.LFbt} onClick={(e) => finddt(e)}>확인</button>
+          <button className={style.LFbt} onClick={(e) => findcancle(e)}>취소</button>
         </div>
         <table className={style.Listtabel}>
           <thead>
