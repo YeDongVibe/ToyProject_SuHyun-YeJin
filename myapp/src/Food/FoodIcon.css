@@ -1,8 +1,34 @@
 .material-symbols-outlined {
-  font-size: 90px;
+  font-size: 70px;
   color: #FD6F22;
   font-weight: bold;
   align-items: center;
   white-space: nowrap;
   box-sizing: border-box;
 }
+  /* 모바일 */
+  @media (max-width: 767px){
+    .material-symbols-outlined {
+      font-size: 20px;
+    }
+    }
+    
+    /* 테블릿 세로 */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .material-symbols-outlined {
+        font-size: 30px;
+      }
+    }
+    
+    /* 테블릿 가로 */
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .material-symbols-outlined {
+        font-size: 40px;
+      }
+    }
+  
+    @media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
+      .material-symbols-outlined {
+        font-size: 40px;
+      }
+    }
