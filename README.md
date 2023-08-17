@@ -4,18 +4,25 @@
 
 **주요 기능**
   * 검색 : 원하는 태그(카테고리)를 선택하면 그에 맞는 음식점 정보 제공.
-  * 페이징 기능 : Back에서 Fetch한 데이터를 front에서 반응형 조건에 맞게 갯수를 제한해서 화면에 표시.
-  * 로그인 : 
+  * 페이징 기능 : Back에서 Fetch한 데이터를 front에서 반응형 조건에 맞게 갯수를 제한하여 화면에 표시.
+  * 로그인 : SpringBoot Security JWT 방식.
   * 회원가입 : 다음 우편번호 서비스 API를 사용.
   * 지도 : 카카오 지도 sdk API를 사용.
 
 **주요 로직**
   * List : Back에서 데이터 처리를 한 후 fetch한 데이터를 front에서 화면에 표시.
-  * category : front에서 map을 돌려 category를 추가할때마다 업데이트?
+  * category : front에서 map을 돌려 category를 추가할때마다 업데이트
+  * Search : filter를 이용하여 검색.
+  * Login : JWT  방식 이용하여 Fornt와 Token을 주고받음.
+  * Join : e-mail 및 비밀번호 중복 확인 한 후 DataBase에 저장.(MemberRepo)
 
 **기술 스택**
-  * Front : Javascript, React, Css
-  * Back : SpringBoot, MySQL,
+  * Front : ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)
+  ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white)
+  * Back : ![MySQL](https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+  ![SpringBoot](https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
 
 **구조**
 ![서비스구조](https://github.com/YeDongVibe/ToyProject_SuHyun-YeJin/assets/129818886/df4f229d-fce1-4924-a335-86cf99d97864)
@@ -99,3 +106,6 @@
 
 **23.08.12**
   * 전체 호스팅 중
+
+**23.08.13**
+  * 전체 마무리
